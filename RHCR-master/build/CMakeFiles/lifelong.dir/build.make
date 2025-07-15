@@ -52,10 +52,10 @@ RM = C:\msys64\mingw64\bin\cmake.exe -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\apoor\Downloads\RHCR-master\RHCR-master
+CMAKE_SOURCE_DIR = C:\Users\apoor\Downloads\RHCR-master\lifelong-mapf--rhcr-\RHCR-master
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\apoor\Downloads\RHCR-master\RHCR-master\build
+CMAKE_BINARY_DIR = C:\Users\apoor\Downloads\RHCR-master\lifelong-mapf--rhcr-\RHCR-master\build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/lifelong.dir/depend.make
@@ -73,408 +73,408 @@ CMakeFiles/lifelong.dir/codegen:
 
 CMakeFiles/lifelong.dir/src/BasicGraph.cpp.obj: CMakeFiles/lifelong.dir/flags.make
 CMakeFiles/lifelong.dir/src/BasicGraph.cpp.obj: CMakeFiles/lifelong.dir/includes_CXX.rsp
-CMakeFiles/lifelong.dir/src/BasicGraph.cpp.obj: C:/Users/apoor/Downloads/RHCR-master/RHCR-master/src/BasicGraph.cpp
+CMakeFiles/lifelong.dir/src/BasicGraph.cpp.obj: C:/Users/apoor/Downloads/RHCR-master/lifelong-mapf--rhcr-/RHCR-master/src/BasicGraph.cpp
 CMakeFiles/lifelong.dir/src/BasicGraph.cpp.obj: CMakeFiles/lifelong.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\apoor\Downloads\RHCR-master\RHCR-master\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/lifelong.dir/src/BasicGraph.cpp.obj"
-	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lifelong.dir/src/BasicGraph.cpp.obj -MF CMakeFiles\lifelong.dir\src\BasicGraph.cpp.obj.d -o CMakeFiles\lifelong.dir\src\BasicGraph.cpp.obj -c C:\Users\apoor\Downloads\RHCR-master\RHCR-master\src\BasicGraph.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\apoor\Downloads\RHCR-master\lifelong-mapf--rhcr-\RHCR-master\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/lifelong.dir/src/BasicGraph.cpp.obj"
+	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lifelong.dir/src/BasicGraph.cpp.obj -MF CMakeFiles\lifelong.dir\src\BasicGraph.cpp.obj.d -o CMakeFiles\lifelong.dir\src\BasicGraph.cpp.obj -c C:\Users\apoor\Downloads\RHCR-master\lifelong-mapf--rhcr-\RHCR-master\src\BasicGraph.cpp
 
 CMakeFiles/lifelong.dir/src/BasicGraph.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/lifelong.dir/src/BasicGraph.cpp.i"
-	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\apoor\Downloads\RHCR-master\RHCR-master\src\BasicGraph.cpp > CMakeFiles\lifelong.dir\src\BasicGraph.cpp.i
+	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\apoor\Downloads\RHCR-master\lifelong-mapf--rhcr-\RHCR-master\src\BasicGraph.cpp > CMakeFiles\lifelong.dir\src\BasicGraph.cpp.i
 
 CMakeFiles/lifelong.dir/src/BasicGraph.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/lifelong.dir/src/BasicGraph.cpp.s"
-	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\apoor\Downloads\RHCR-master\RHCR-master\src\BasicGraph.cpp -o CMakeFiles\lifelong.dir\src\BasicGraph.cpp.s
+	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\apoor\Downloads\RHCR-master\lifelong-mapf--rhcr-\RHCR-master\src\BasicGraph.cpp -o CMakeFiles\lifelong.dir\src\BasicGraph.cpp.s
 
 CMakeFiles/lifelong.dir/src/BasicSystem.cpp.obj: CMakeFiles/lifelong.dir/flags.make
 CMakeFiles/lifelong.dir/src/BasicSystem.cpp.obj: CMakeFiles/lifelong.dir/includes_CXX.rsp
-CMakeFiles/lifelong.dir/src/BasicSystem.cpp.obj: C:/Users/apoor/Downloads/RHCR-master/RHCR-master/src/BasicSystem.cpp
+CMakeFiles/lifelong.dir/src/BasicSystem.cpp.obj: C:/Users/apoor/Downloads/RHCR-master/lifelong-mapf--rhcr-/RHCR-master/src/BasicSystem.cpp
 CMakeFiles/lifelong.dir/src/BasicSystem.cpp.obj: CMakeFiles/lifelong.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\apoor\Downloads\RHCR-master\RHCR-master\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/lifelong.dir/src/BasicSystem.cpp.obj"
-	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lifelong.dir/src/BasicSystem.cpp.obj -MF CMakeFiles\lifelong.dir\src\BasicSystem.cpp.obj.d -o CMakeFiles\lifelong.dir\src\BasicSystem.cpp.obj -c C:\Users\apoor\Downloads\RHCR-master\RHCR-master\src\BasicSystem.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\apoor\Downloads\RHCR-master\lifelong-mapf--rhcr-\RHCR-master\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/lifelong.dir/src/BasicSystem.cpp.obj"
+	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lifelong.dir/src/BasicSystem.cpp.obj -MF CMakeFiles\lifelong.dir\src\BasicSystem.cpp.obj.d -o CMakeFiles\lifelong.dir\src\BasicSystem.cpp.obj -c C:\Users\apoor\Downloads\RHCR-master\lifelong-mapf--rhcr-\RHCR-master\src\BasicSystem.cpp
 
 CMakeFiles/lifelong.dir/src/BasicSystem.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/lifelong.dir/src/BasicSystem.cpp.i"
-	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\apoor\Downloads\RHCR-master\RHCR-master\src\BasicSystem.cpp > CMakeFiles\lifelong.dir\src\BasicSystem.cpp.i
+	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\apoor\Downloads\RHCR-master\lifelong-mapf--rhcr-\RHCR-master\src\BasicSystem.cpp > CMakeFiles\lifelong.dir\src\BasicSystem.cpp.i
 
 CMakeFiles/lifelong.dir/src/BasicSystem.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/lifelong.dir/src/BasicSystem.cpp.s"
-	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\apoor\Downloads\RHCR-master\RHCR-master\src\BasicSystem.cpp -o CMakeFiles\lifelong.dir\src\BasicSystem.cpp.s
+	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\apoor\Downloads\RHCR-master\lifelong-mapf--rhcr-\RHCR-master\src\BasicSystem.cpp -o CMakeFiles\lifelong.dir\src\BasicSystem.cpp.s
 
 CMakeFiles/lifelong.dir/src/BeeGraph.cpp.obj: CMakeFiles/lifelong.dir/flags.make
 CMakeFiles/lifelong.dir/src/BeeGraph.cpp.obj: CMakeFiles/lifelong.dir/includes_CXX.rsp
-CMakeFiles/lifelong.dir/src/BeeGraph.cpp.obj: C:/Users/apoor/Downloads/RHCR-master/RHCR-master/src/BeeGraph.cpp
+CMakeFiles/lifelong.dir/src/BeeGraph.cpp.obj: C:/Users/apoor/Downloads/RHCR-master/lifelong-mapf--rhcr-/RHCR-master/src/BeeGraph.cpp
 CMakeFiles/lifelong.dir/src/BeeGraph.cpp.obj: CMakeFiles/lifelong.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\apoor\Downloads\RHCR-master\RHCR-master\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/lifelong.dir/src/BeeGraph.cpp.obj"
-	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lifelong.dir/src/BeeGraph.cpp.obj -MF CMakeFiles\lifelong.dir\src\BeeGraph.cpp.obj.d -o CMakeFiles\lifelong.dir\src\BeeGraph.cpp.obj -c C:\Users\apoor\Downloads\RHCR-master\RHCR-master\src\BeeGraph.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\apoor\Downloads\RHCR-master\lifelong-mapf--rhcr-\RHCR-master\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/lifelong.dir/src/BeeGraph.cpp.obj"
+	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lifelong.dir/src/BeeGraph.cpp.obj -MF CMakeFiles\lifelong.dir\src\BeeGraph.cpp.obj.d -o CMakeFiles\lifelong.dir\src\BeeGraph.cpp.obj -c C:\Users\apoor\Downloads\RHCR-master\lifelong-mapf--rhcr-\RHCR-master\src\BeeGraph.cpp
 
 CMakeFiles/lifelong.dir/src/BeeGraph.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/lifelong.dir/src/BeeGraph.cpp.i"
-	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\apoor\Downloads\RHCR-master\RHCR-master\src\BeeGraph.cpp > CMakeFiles\lifelong.dir\src\BeeGraph.cpp.i
+	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\apoor\Downloads\RHCR-master\lifelong-mapf--rhcr-\RHCR-master\src\BeeGraph.cpp > CMakeFiles\lifelong.dir\src\BeeGraph.cpp.i
 
 CMakeFiles/lifelong.dir/src/BeeGraph.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/lifelong.dir/src/BeeGraph.cpp.s"
-	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\apoor\Downloads\RHCR-master\RHCR-master\src\BeeGraph.cpp -o CMakeFiles\lifelong.dir\src\BeeGraph.cpp.s
+	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\apoor\Downloads\RHCR-master\lifelong-mapf--rhcr-\RHCR-master\src\BeeGraph.cpp -o CMakeFiles\lifelong.dir\src\BeeGraph.cpp.s
 
 CMakeFiles/lifelong.dir/src/BeeSystem.cpp.obj: CMakeFiles/lifelong.dir/flags.make
 CMakeFiles/lifelong.dir/src/BeeSystem.cpp.obj: CMakeFiles/lifelong.dir/includes_CXX.rsp
-CMakeFiles/lifelong.dir/src/BeeSystem.cpp.obj: C:/Users/apoor/Downloads/RHCR-master/RHCR-master/src/BeeSystem.cpp
+CMakeFiles/lifelong.dir/src/BeeSystem.cpp.obj: C:/Users/apoor/Downloads/RHCR-master/lifelong-mapf--rhcr-/RHCR-master/src/BeeSystem.cpp
 CMakeFiles/lifelong.dir/src/BeeSystem.cpp.obj: CMakeFiles/lifelong.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\apoor\Downloads\RHCR-master\RHCR-master\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/lifelong.dir/src/BeeSystem.cpp.obj"
-	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lifelong.dir/src/BeeSystem.cpp.obj -MF CMakeFiles\lifelong.dir\src\BeeSystem.cpp.obj.d -o CMakeFiles\lifelong.dir\src\BeeSystem.cpp.obj -c C:\Users\apoor\Downloads\RHCR-master\RHCR-master\src\BeeSystem.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\apoor\Downloads\RHCR-master\lifelong-mapf--rhcr-\RHCR-master\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/lifelong.dir/src/BeeSystem.cpp.obj"
+	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lifelong.dir/src/BeeSystem.cpp.obj -MF CMakeFiles\lifelong.dir\src\BeeSystem.cpp.obj.d -o CMakeFiles\lifelong.dir\src\BeeSystem.cpp.obj -c C:\Users\apoor\Downloads\RHCR-master\lifelong-mapf--rhcr-\RHCR-master\src\BeeSystem.cpp
 
 CMakeFiles/lifelong.dir/src/BeeSystem.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/lifelong.dir/src/BeeSystem.cpp.i"
-	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\apoor\Downloads\RHCR-master\RHCR-master\src\BeeSystem.cpp > CMakeFiles\lifelong.dir\src\BeeSystem.cpp.i
+	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\apoor\Downloads\RHCR-master\lifelong-mapf--rhcr-\RHCR-master\src\BeeSystem.cpp > CMakeFiles\lifelong.dir\src\BeeSystem.cpp.i
 
 CMakeFiles/lifelong.dir/src/BeeSystem.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/lifelong.dir/src/BeeSystem.cpp.s"
-	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\apoor\Downloads\RHCR-master\RHCR-master\src\BeeSystem.cpp -o CMakeFiles\lifelong.dir\src\BeeSystem.cpp.s
+	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\apoor\Downloads\RHCR-master\lifelong-mapf--rhcr-\RHCR-master\src\BeeSystem.cpp -o CMakeFiles\lifelong.dir\src\BeeSystem.cpp.s
 
 CMakeFiles/lifelong.dir/src/ECBS.cpp.obj: CMakeFiles/lifelong.dir/flags.make
 CMakeFiles/lifelong.dir/src/ECBS.cpp.obj: CMakeFiles/lifelong.dir/includes_CXX.rsp
-CMakeFiles/lifelong.dir/src/ECBS.cpp.obj: C:/Users/apoor/Downloads/RHCR-master/RHCR-master/src/ECBS.cpp
+CMakeFiles/lifelong.dir/src/ECBS.cpp.obj: C:/Users/apoor/Downloads/RHCR-master/lifelong-mapf--rhcr-/RHCR-master/src/ECBS.cpp
 CMakeFiles/lifelong.dir/src/ECBS.cpp.obj: CMakeFiles/lifelong.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\apoor\Downloads\RHCR-master\RHCR-master\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/lifelong.dir/src/ECBS.cpp.obj"
-	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lifelong.dir/src/ECBS.cpp.obj -MF CMakeFiles\lifelong.dir\src\ECBS.cpp.obj.d -o CMakeFiles\lifelong.dir\src\ECBS.cpp.obj -c C:\Users\apoor\Downloads\RHCR-master\RHCR-master\src\ECBS.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\apoor\Downloads\RHCR-master\lifelong-mapf--rhcr-\RHCR-master\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/lifelong.dir/src/ECBS.cpp.obj"
+	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lifelong.dir/src/ECBS.cpp.obj -MF CMakeFiles\lifelong.dir\src\ECBS.cpp.obj.d -o CMakeFiles\lifelong.dir\src\ECBS.cpp.obj -c C:\Users\apoor\Downloads\RHCR-master\lifelong-mapf--rhcr-\RHCR-master\src\ECBS.cpp
 
 CMakeFiles/lifelong.dir/src/ECBS.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/lifelong.dir/src/ECBS.cpp.i"
-	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\apoor\Downloads\RHCR-master\RHCR-master\src\ECBS.cpp > CMakeFiles\lifelong.dir\src\ECBS.cpp.i
+	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\apoor\Downloads\RHCR-master\lifelong-mapf--rhcr-\RHCR-master\src\ECBS.cpp > CMakeFiles\lifelong.dir\src\ECBS.cpp.i
 
 CMakeFiles/lifelong.dir/src/ECBS.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/lifelong.dir/src/ECBS.cpp.s"
-	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\apoor\Downloads\RHCR-master\RHCR-master\src\ECBS.cpp -o CMakeFiles\lifelong.dir\src\ECBS.cpp.s
+	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\apoor\Downloads\RHCR-master\lifelong-mapf--rhcr-\RHCR-master\src\ECBS.cpp -o CMakeFiles\lifelong.dir\src\ECBS.cpp.s
 
 CMakeFiles/lifelong.dir/src/ECBSNode.cpp.obj: CMakeFiles/lifelong.dir/flags.make
 CMakeFiles/lifelong.dir/src/ECBSNode.cpp.obj: CMakeFiles/lifelong.dir/includes_CXX.rsp
-CMakeFiles/lifelong.dir/src/ECBSNode.cpp.obj: C:/Users/apoor/Downloads/RHCR-master/RHCR-master/src/ECBSNode.cpp
+CMakeFiles/lifelong.dir/src/ECBSNode.cpp.obj: C:/Users/apoor/Downloads/RHCR-master/lifelong-mapf--rhcr-/RHCR-master/src/ECBSNode.cpp
 CMakeFiles/lifelong.dir/src/ECBSNode.cpp.obj: CMakeFiles/lifelong.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\apoor\Downloads\RHCR-master\RHCR-master\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/lifelong.dir/src/ECBSNode.cpp.obj"
-	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lifelong.dir/src/ECBSNode.cpp.obj -MF CMakeFiles\lifelong.dir\src\ECBSNode.cpp.obj.d -o CMakeFiles\lifelong.dir\src\ECBSNode.cpp.obj -c C:\Users\apoor\Downloads\RHCR-master\RHCR-master\src\ECBSNode.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\apoor\Downloads\RHCR-master\lifelong-mapf--rhcr-\RHCR-master\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/lifelong.dir/src/ECBSNode.cpp.obj"
+	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lifelong.dir/src/ECBSNode.cpp.obj -MF CMakeFiles\lifelong.dir\src\ECBSNode.cpp.obj.d -o CMakeFiles\lifelong.dir\src\ECBSNode.cpp.obj -c C:\Users\apoor\Downloads\RHCR-master\lifelong-mapf--rhcr-\RHCR-master\src\ECBSNode.cpp
 
 CMakeFiles/lifelong.dir/src/ECBSNode.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/lifelong.dir/src/ECBSNode.cpp.i"
-	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\apoor\Downloads\RHCR-master\RHCR-master\src\ECBSNode.cpp > CMakeFiles\lifelong.dir\src\ECBSNode.cpp.i
+	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\apoor\Downloads\RHCR-master\lifelong-mapf--rhcr-\RHCR-master\src\ECBSNode.cpp > CMakeFiles\lifelong.dir\src\ECBSNode.cpp.i
 
 CMakeFiles/lifelong.dir/src/ECBSNode.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/lifelong.dir/src/ECBSNode.cpp.s"
-	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\apoor\Downloads\RHCR-master\RHCR-master\src\ECBSNode.cpp -o CMakeFiles\lifelong.dir\src\ECBSNode.cpp.s
+	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\apoor\Downloads\RHCR-master\lifelong-mapf--rhcr-\RHCR-master\src\ECBSNode.cpp -o CMakeFiles\lifelong.dir\src\ECBSNode.cpp.s
 
 CMakeFiles/lifelong.dir/src/ID.cpp.obj: CMakeFiles/lifelong.dir/flags.make
 CMakeFiles/lifelong.dir/src/ID.cpp.obj: CMakeFiles/lifelong.dir/includes_CXX.rsp
-CMakeFiles/lifelong.dir/src/ID.cpp.obj: C:/Users/apoor/Downloads/RHCR-master/RHCR-master/src/ID.cpp
+CMakeFiles/lifelong.dir/src/ID.cpp.obj: C:/Users/apoor/Downloads/RHCR-master/lifelong-mapf--rhcr-/RHCR-master/src/ID.cpp
 CMakeFiles/lifelong.dir/src/ID.cpp.obj: CMakeFiles/lifelong.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\apoor\Downloads\RHCR-master\RHCR-master\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/lifelong.dir/src/ID.cpp.obj"
-	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lifelong.dir/src/ID.cpp.obj -MF CMakeFiles\lifelong.dir\src\ID.cpp.obj.d -o CMakeFiles\lifelong.dir\src\ID.cpp.obj -c C:\Users\apoor\Downloads\RHCR-master\RHCR-master\src\ID.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\apoor\Downloads\RHCR-master\lifelong-mapf--rhcr-\RHCR-master\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/lifelong.dir/src/ID.cpp.obj"
+	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lifelong.dir/src/ID.cpp.obj -MF CMakeFiles\lifelong.dir\src\ID.cpp.obj.d -o CMakeFiles\lifelong.dir\src\ID.cpp.obj -c C:\Users\apoor\Downloads\RHCR-master\lifelong-mapf--rhcr-\RHCR-master\src\ID.cpp
 
 CMakeFiles/lifelong.dir/src/ID.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/lifelong.dir/src/ID.cpp.i"
-	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\apoor\Downloads\RHCR-master\RHCR-master\src\ID.cpp > CMakeFiles\lifelong.dir\src\ID.cpp.i
+	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\apoor\Downloads\RHCR-master\lifelong-mapf--rhcr-\RHCR-master\src\ID.cpp > CMakeFiles\lifelong.dir\src\ID.cpp.i
 
 CMakeFiles/lifelong.dir/src/ID.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/lifelong.dir/src/ID.cpp.s"
-	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\apoor\Downloads\RHCR-master\RHCR-master\src\ID.cpp -o CMakeFiles\lifelong.dir\src\ID.cpp.s
+	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\apoor\Downloads\RHCR-master\lifelong-mapf--rhcr-\RHCR-master\src\ID.cpp -o CMakeFiles\lifelong.dir\src\ID.cpp.s
 
 CMakeFiles/lifelong.dir/src/KivaGraph.cpp.obj: CMakeFiles/lifelong.dir/flags.make
 CMakeFiles/lifelong.dir/src/KivaGraph.cpp.obj: CMakeFiles/lifelong.dir/includes_CXX.rsp
-CMakeFiles/lifelong.dir/src/KivaGraph.cpp.obj: C:/Users/apoor/Downloads/RHCR-master/RHCR-master/src/KivaGraph.cpp
+CMakeFiles/lifelong.dir/src/KivaGraph.cpp.obj: C:/Users/apoor/Downloads/RHCR-master/lifelong-mapf--rhcr-/RHCR-master/src/KivaGraph.cpp
 CMakeFiles/lifelong.dir/src/KivaGraph.cpp.obj: CMakeFiles/lifelong.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\apoor\Downloads\RHCR-master\RHCR-master\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/lifelong.dir/src/KivaGraph.cpp.obj"
-	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lifelong.dir/src/KivaGraph.cpp.obj -MF CMakeFiles\lifelong.dir\src\KivaGraph.cpp.obj.d -o CMakeFiles\lifelong.dir\src\KivaGraph.cpp.obj -c C:\Users\apoor\Downloads\RHCR-master\RHCR-master\src\KivaGraph.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\apoor\Downloads\RHCR-master\lifelong-mapf--rhcr-\RHCR-master\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/lifelong.dir/src/KivaGraph.cpp.obj"
+	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lifelong.dir/src/KivaGraph.cpp.obj -MF CMakeFiles\lifelong.dir\src\KivaGraph.cpp.obj.d -o CMakeFiles\lifelong.dir\src\KivaGraph.cpp.obj -c C:\Users\apoor\Downloads\RHCR-master\lifelong-mapf--rhcr-\RHCR-master\src\KivaGraph.cpp
 
 CMakeFiles/lifelong.dir/src/KivaGraph.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/lifelong.dir/src/KivaGraph.cpp.i"
-	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\apoor\Downloads\RHCR-master\RHCR-master\src\KivaGraph.cpp > CMakeFiles\lifelong.dir\src\KivaGraph.cpp.i
+	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\apoor\Downloads\RHCR-master\lifelong-mapf--rhcr-\RHCR-master\src\KivaGraph.cpp > CMakeFiles\lifelong.dir\src\KivaGraph.cpp.i
 
 CMakeFiles/lifelong.dir/src/KivaGraph.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/lifelong.dir/src/KivaGraph.cpp.s"
-	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\apoor\Downloads\RHCR-master\RHCR-master\src\KivaGraph.cpp -o CMakeFiles\lifelong.dir\src\KivaGraph.cpp.s
+	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\apoor\Downloads\RHCR-master\lifelong-mapf--rhcr-\RHCR-master\src\KivaGraph.cpp -o CMakeFiles\lifelong.dir\src\KivaGraph.cpp.s
 
 CMakeFiles/lifelong.dir/src/KivaSystem.cpp.obj: CMakeFiles/lifelong.dir/flags.make
 CMakeFiles/lifelong.dir/src/KivaSystem.cpp.obj: CMakeFiles/lifelong.dir/includes_CXX.rsp
-CMakeFiles/lifelong.dir/src/KivaSystem.cpp.obj: C:/Users/apoor/Downloads/RHCR-master/RHCR-master/src/KivaSystem.cpp
+CMakeFiles/lifelong.dir/src/KivaSystem.cpp.obj: C:/Users/apoor/Downloads/RHCR-master/lifelong-mapf--rhcr-/RHCR-master/src/KivaSystem.cpp
 CMakeFiles/lifelong.dir/src/KivaSystem.cpp.obj: CMakeFiles/lifelong.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\apoor\Downloads\RHCR-master\RHCR-master\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/lifelong.dir/src/KivaSystem.cpp.obj"
-	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lifelong.dir/src/KivaSystem.cpp.obj -MF CMakeFiles\lifelong.dir\src\KivaSystem.cpp.obj.d -o CMakeFiles\lifelong.dir\src\KivaSystem.cpp.obj -c C:\Users\apoor\Downloads\RHCR-master\RHCR-master\src\KivaSystem.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\apoor\Downloads\RHCR-master\lifelong-mapf--rhcr-\RHCR-master\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/lifelong.dir/src/KivaSystem.cpp.obj"
+	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lifelong.dir/src/KivaSystem.cpp.obj -MF CMakeFiles\lifelong.dir\src\KivaSystem.cpp.obj.d -o CMakeFiles\lifelong.dir\src\KivaSystem.cpp.obj -c C:\Users\apoor\Downloads\RHCR-master\lifelong-mapf--rhcr-\RHCR-master\src\KivaSystem.cpp
 
 CMakeFiles/lifelong.dir/src/KivaSystem.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/lifelong.dir/src/KivaSystem.cpp.i"
-	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\apoor\Downloads\RHCR-master\RHCR-master\src\KivaSystem.cpp > CMakeFiles\lifelong.dir\src\KivaSystem.cpp.i
+	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\apoor\Downloads\RHCR-master\lifelong-mapf--rhcr-\RHCR-master\src\KivaSystem.cpp > CMakeFiles\lifelong.dir\src\KivaSystem.cpp.i
 
 CMakeFiles/lifelong.dir/src/KivaSystem.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/lifelong.dir/src/KivaSystem.cpp.s"
-	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\apoor\Downloads\RHCR-master\RHCR-master\src\KivaSystem.cpp -o CMakeFiles\lifelong.dir\src\KivaSystem.cpp.s
+	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\apoor\Downloads\RHCR-master\lifelong-mapf--rhcr-\RHCR-master\src\KivaSystem.cpp -o CMakeFiles\lifelong.dir\src\KivaSystem.cpp.s
 
 CMakeFiles/lifelong.dir/src/LRAStar.cpp.obj: CMakeFiles/lifelong.dir/flags.make
 CMakeFiles/lifelong.dir/src/LRAStar.cpp.obj: CMakeFiles/lifelong.dir/includes_CXX.rsp
-CMakeFiles/lifelong.dir/src/LRAStar.cpp.obj: C:/Users/apoor/Downloads/RHCR-master/RHCR-master/src/LRAStar.cpp
+CMakeFiles/lifelong.dir/src/LRAStar.cpp.obj: C:/Users/apoor/Downloads/RHCR-master/lifelong-mapf--rhcr-/RHCR-master/src/LRAStar.cpp
 CMakeFiles/lifelong.dir/src/LRAStar.cpp.obj: CMakeFiles/lifelong.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\apoor\Downloads\RHCR-master\RHCR-master\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/lifelong.dir/src/LRAStar.cpp.obj"
-	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lifelong.dir/src/LRAStar.cpp.obj -MF CMakeFiles\lifelong.dir\src\LRAStar.cpp.obj.d -o CMakeFiles\lifelong.dir\src\LRAStar.cpp.obj -c C:\Users\apoor\Downloads\RHCR-master\RHCR-master\src\LRAStar.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\apoor\Downloads\RHCR-master\lifelong-mapf--rhcr-\RHCR-master\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/lifelong.dir/src/LRAStar.cpp.obj"
+	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lifelong.dir/src/LRAStar.cpp.obj -MF CMakeFiles\lifelong.dir\src\LRAStar.cpp.obj.d -o CMakeFiles\lifelong.dir\src\LRAStar.cpp.obj -c C:\Users\apoor\Downloads\RHCR-master\lifelong-mapf--rhcr-\RHCR-master\src\LRAStar.cpp
 
 CMakeFiles/lifelong.dir/src/LRAStar.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/lifelong.dir/src/LRAStar.cpp.i"
-	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\apoor\Downloads\RHCR-master\RHCR-master\src\LRAStar.cpp > CMakeFiles\lifelong.dir\src\LRAStar.cpp.i
+	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\apoor\Downloads\RHCR-master\lifelong-mapf--rhcr-\RHCR-master\src\LRAStar.cpp > CMakeFiles\lifelong.dir\src\LRAStar.cpp.i
 
 CMakeFiles/lifelong.dir/src/LRAStar.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/lifelong.dir/src/LRAStar.cpp.s"
-	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\apoor\Downloads\RHCR-master\RHCR-master\src\LRAStar.cpp -o CMakeFiles\lifelong.dir\src\LRAStar.cpp.s
+	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\apoor\Downloads\RHCR-master\lifelong-mapf--rhcr-\RHCR-master\src\LRAStar.cpp -o CMakeFiles\lifelong.dir\src\LRAStar.cpp.s
 
 CMakeFiles/lifelong.dir/src/MAPFSolver.cpp.obj: CMakeFiles/lifelong.dir/flags.make
 CMakeFiles/lifelong.dir/src/MAPFSolver.cpp.obj: CMakeFiles/lifelong.dir/includes_CXX.rsp
-CMakeFiles/lifelong.dir/src/MAPFSolver.cpp.obj: C:/Users/apoor/Downloads/RHCR-master/RHCR-master/src/MAPFSolver.cpp
+CMakeFiles/lifelong.dir/src/MAPFSolver.cpp.obj: C:/Users/apoor/Downloads/RHCR-master/lifelong-mapf--rhcr-/RHCR-master/src/MAPFSolver.cpp
 CMakeFiles/lifelong.dir/src/MAPFSolver.cpp.obj: CMakeFiles/lifelong.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\apoor\Downloads\RHCR-master\RHCR-master\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/lifelong.dir/src/MAPFSolver.cpp.obj"
-	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lifelong.dir/src/MAPFSolver.cpp.obj -MF CMakeFiles\lifelong.dir\src\MAPFSolver.cpp.obj.d -o CMakeFiles\lifelong.dir\src\MAPFSolver.cpp.obj -c C:\Users\apoor\Downloads\RHCR-master\RHCR-master\src\MAPFSolver.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\apoor\Downloads\RHCR-master\lifelong-mapf--rhcr-\RHCR-master\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/lifelong.dir/src/MAPFSolver.cpp.obj"
+	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lifelong.dir/src/MAPFSolver.cpp.obj -MF CMakeFiles\lifelong.dir\src\MAPFSolver.cpp.obj.d -o CMakeFiles\lifelong.dir\src\MAPFSolver.cpp.obj -c C:\Users\apoor\Downloads\RHCR-master\lifelong-mapf--rhcr-\RHCR-master\src\MAPFSolver.cpp
 
 CMakeFiles/lifelong.dir/src/MAPFSolver.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/lifelong.dir/src/MAPFSolver.cpp.i"
-	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\apoor\Downloads\RHCR-master\RHCR-master\src\MAPFSolver.cpp > CMakeFiles\lifelong.dir\src\MAPFSolver.cpp.i
+	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\apoor\Downloads\RHCR-master\lifelong-mapf--rhcr-\RHCR-master\src\MAPFSolver.cpp > CMakeFiles\lifelong.dir\src\MAPFSolver.cpp.i
 
 CMakeFiles/lifelong.dir/src/MAPFSolver.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/lifelong.dir/src/MAPFSolver.cpp.s"
-	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\apoor\Downloads\RHCR-master\RHCR-master\src\MAPFSolver.cpp -o CMakeFiles\lifelong.dir\src\MAPFSolver.cpp.s
+	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\apoor\Downloads\RHCR-master\lifelong-mapf--rhcr-\RHCR-master\src\MAPFSolver.cpp -o CMakeFiles\lifelong.dir\src\MAPFSolver.cpp.s
 
 CMakeFiles/lifelong.dir/src/OnlineGraph.cpp.obj: CMakeFiles/lifelong.dir/flags.make
 CMakeFiles/lifelong.dir/src/OnlineGraph.cpp.obj: CMakeFiles/lifelong.dir/includes_CXX.rsp
-CMakeFiles/lifelong.dir/src/OnlineGraph.cpp.obj: C:/Users/apoor/Downloads/RHCR-master/RHCR-master/src/OnlineGraph.cpp
+CMakeFiles/lifelong.dir/src/OnlineGraph.cpp.obj: C:/Users/apoor/Downloads/RHCR-master/lifelong-mapf--rhcr-/RHCR-master/src/OnlineGraph.cpp
 CMakeFiles/lifelong.dir/src/OnlineGraph.cpp.obj: CMakeFiles/lifelong.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\apoor\Downloads\RHCR-master\RHCR-master\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/lifelong.dir/src/OnlineGraph.cpp.obj"
-	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lifelong.dir/src/OnlineGraph.cpp.obj -MF CMakeFiles\lifelong.dir\src\OnlineGraph.cpp.obj.d -o CMakeFiles\lifelong.dir\src\OnlineGraph.cpp.obj -c C:\Users\apoor\Downloads\RHCR-master\RHCR-master\src\OnlineGraph.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\apoor\Downloads\RHCR-master\lifelong-mapf--rhcr-\RHCR-master\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/lifelong.dir/src/OnlineGraph.cpp.obj"
+	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lifelong.dir/src/OnlineGraph.cpp.obj -MF CMakeFiles\lifelong.dir\src\OnlineGraph.cpp.obj.d -o CMakeFiles\lifelong.dir\src\OnlineGraph.cpp.obj -c C:\Users\apoor\Downloads\RHCR-master\lifelong-mapf--rhcr-\RHCR-master\src\OnlineGraph.cpp
 
 CMakeFiles/lifelong.dir/src/OnlineGraph.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/lifelong.dir/src/OnlineGraph.cpp.i"
-	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\apoor\Downloads\RHCR-master\RHCR-master\src\OnlineGraph.cpp > CMakeFiles\lifelong.dir\src\OnlineGraph.cpp.i
+	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\apoor\Downloads\RHCR-master\lifelong-mapf--rhcr-\RHCR-master\src\OnlineGraph.cpp > CMakeFiles\lifelong.dir\src\OnlineGraph.cpp.i
 
 CMakeFiles/lifelong.dir/src/OnlineGraph.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/lifelong.dir/src/OnlineGraph.cpp.s"
-	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\apoor\Downloads\RHCR-master\RHCR-master\src\OnlineGraph.cpp -o CMakeFiles\lifelong.dir\src\OnlineGraph.cpp.s
+	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\apoor\Downloads\RHCR-master\lifelong-mapf--rhcr-\RHCR-master\src\OnlineGraph.cpp -o CMakeFiles\lifelong.dir\src\OnlineGraph.cpp.s
 
 CMakeFiles/lifelong.dir/src/OnlineSystem.cpp.obj: CMakeFiles/lifelong.dir/flags.make
 CMakeFiles/lifelong.dir/src/OnlineSystem.cpp.obj: CMakeFiles/lifelong.dir/includes_CXX.rsp
-CMakeFiles/lifelong.dir/src/OnlineSystem.cpp.obj: C:/Users/apoor/Downloads/RHCR-master/RHCR-master/src/OnlineSystem.cpp
+CMakeFiles/lifelong.dir/src/OnlineSystem.cpp.obj: C:/Users/apoor/Downloads/RHCR-master/lifelong-mapf--rhcr-/RHCR-master/src/OnlineSystem.cpp
 CMakeFiles/lifelong.dir/src/OnlineSystem.cpp.obj: CMakeFiles/lifelong.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\apoor\Downloads\RHCR-master\RHCR-master\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/lifelong.dir/src/OnlineSystem.cpp.obj"
-	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lifelong.dir/src/OnlineSystem.cpp.obj -MF CMakeFiles\lifelong.dir\src\OnlineSystem.cpp.obj.d -o CMakeFiles\lifelong.dir\src\OnlineSystem.cpp.obj -c C:\Users\apoor\Downloads\RHCR-master\RHCR-master\src\OnlineSystem.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\apoor\Downloads\RHCR-master\lifelong-mapf--rhcr-\RHCR-master\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/lifelong.dir/src/OnlineSystem.cpp.obj"
+	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lifelong.dir/src/OnlineSystem.cpp.obj -MF CMakeFiles\lifelong.dir\src\OnlineSystem.cpp.obj.d -o CMakeFiles\lifelong.dir\src\OnlineSystem.cpp.obj -c C:\Users\apoor\Downloads\RHCR-master\lifelong-mapf--rhcr-\RHCR-master\src\OnlineSystem.cpp
 
 CMakeFiles/lifelong.dir/src/OnlineSystem.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/lifelong.dir/src/OnlineSystem.cpp.i"
-	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\apoor\Downloads\RHCR-master\RHCR-master\src\OnlineSystem.cpp > CMakeFiles\lifelong.dir\src\OnlineSystem.cpp.i
+	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\apoor\Downloads\RHCR-master\lifelong-mapf--rhcr-\RHCR-master\src\OnlineSystem.cpp > CMakeFiles\lifelong.dir\src\OnlineSystem.cpp.i
 
 CMakeFiles/lifelong.dir/src/OnlineSystem.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/lifelong.dir/src/OnlineSystem.cpp.s"
-	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\apoor\Downloads\RHCR-master\RHCR-master\src\OnlineSystem.cpp -o CMakeFiles\lifelong.dir\src\OnlineSystem.cpp.s
+	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\apoor\Downloads\RHCR-master\lifelong-mapf--rhcr-\RHCR-master\src\OnlineSystem.cpp -o CMakeFiles\lifelong.dir\src\OnlineSystem.cpp.s
 
 CMakeFiles/lifelong.dir/src/PBS.cpp.obj: CMakeFiles/lifelong.dir/flags.make
 CMakeFiles/lifelong.dir/src/PBS.cpp.obj: CMakeFiles/lifelong.dir/includes_CXX.rsp
-CMakeFiles/lifelong.dir/src/PBS.cpp.obj: C:/Users/apoor/Downloads/RHCR-master/RHCR-master/src/PBS.cpp
+CMakeFiles/lifelong.dir/src/PBS.cpp.obj: C:/Users/apoor/Downloads/RHCR-master/lifelong-mapf--rhcr-/RHCR-master/src/PBS.cpp
 CMakeFiles/lifelong.dir/src/PBS.cpp.obj: CMakeFiles/lifelong.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\apoor\Downloads\RHCR-master\RHCR-master\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/lifelong.dir/src/PBS.cpp.obj"
-	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lifelong.dir/src/PBS.cpp.obj -MF CMakeFiles\lifelong.dir\src\PBS.cpp.obj.d -o CMakeFiles\lifelong.dir\src\PBS.cpp.obj -c C:\Users\apoor\Downloads\RHCR-master\RHCR-master\src\PBS.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\apoor\Downloads\RHCR-master\lifelong-mapf--rhcr-\RHCR-master\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/lifelong.dir/src/PBS.cpp.obj"
+	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lifelong.dir/src/PBS.cpp.obj -MF CMakeFiles\lifelong.dir\src\PBS.cpp.obj.d -o CMakeFiles\lifelong.dir\src\PBS.cpp.obj -c C:\Users\apoor\Downloads\RHCR-master\lifelong-mapf--rhcr-\RHCR-master\src\PBS.cpp
 
 CMakeFiles/lifelong.dir/src/PBS.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/lifelong.dir/src/PBS.cpp.i"
-	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\apoor\Downloads\RHCR-master\RHCR-master\src\PBS.cpp > CMakeFiles\lifelong.dir\src\PBS.cpp.i
+	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\apoor\Downloads\RHCR-master\lifelong-mapf--rhcr-\RHCR-master\src\PBS.cpp > CMakeFiles\lifelong.dir\src\PBS.cpp.i
 
 CMakeFiles/lifelong.dir/src/PBS.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/lifelong.dir/src/PBS.cpp.s"
-	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\apoor\Downloads\RHCR-master\RHCR-master\src\PBS.cpp -o CMakeFiles\lifelong.dir\src\PBS.cpp.s
+	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\apoor\Downloads\RHCR-master\lifelong-mapf--rhcr-\RHCR-master\src\PBS.cpp -o CMakeFiles\lifelong.dir\src\PBS.cpp.s
 
 CMakeFiles/lifelong.dir/src/PBSNode.cpp.obj: CMakeFiles/lifelong.dir/flags.make
 CMakeFiles/lifelong.dir/src/PBSNode.cpp.obj: CMakeFiles/lifelong.dir/includes_CXX.rsp
-CMakeFiles/lifelong.dir/src/PBSNode.cpp.obj: C:/Users/apoor/Downloads/RHCR-master/RHCR-master/src/PBSNode.cpp
+CMakeFiles/lifelong.dir/src/PBSNode.cpp.obj: C:/Users/apoor/Downloads/RHCR-master/lifelong-mapf--rhcr-/RHCR-master/src/PBSNode.cpp
 CMakeFiles/lifelong.dir/src/PBSNode.cpp.obj: CMakeFiles/lifelong.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\apoor\Downloads\RHCR-master\RHCR-master\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/lifelong.dir/src/PBSNode.cpp.obj"
-	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lifelong.dir/src/PBSNode.cpp.obj -MF CMakeFiles\lifelong.dir\src\PBSNode.cpp.obj.d -o CMakeFiles\lifelong.dir\src\PBSNode.cpp.obj -c C:\Users\apoor\Downloads\RHCR-master\RHCR-master\src\PBSNode.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\apoor\Downloads\RHCR-master\lifelong-mapf--rhcr-\RHCR-master\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/lifelong.dir/src/PBSNode.cpp.obj"
+	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lifelong.dir/src/PBSNode.cpp.obj -MF CMakeFiles\lifelong.dir\src\PBSNode.cpp.obj.d -o CMakeFiles\lifelong.dir\src\PBSNode.cpp.obj -c C:\Users\apoor\Downloads\RHCR-master\lifelong-mapf--rhcr-\RHCR-master\src\PBSNode.cpp
 
 CMakeFiles/lifelong.dir/src/PBSNode.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/lifelong.dir/src/PBSNode.cpp.i"
-	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\apoor\Downloads\RHCR-master\RHCR-master\src\PBSNode.cpp > CMakeFiles\lifelong.dir\src\PBSNode.cpp.i
+	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\apoor\Downloads\RHCR-master\lifelong-mapf--rhcr-\RHCR-master\src\PBSNode.cpp > CMakeFiles\lifelong.dir\src\PBSNode.cpp.i
 
 CMakeFiles/lifelong.dir/src/PBSNode.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/lifelong.dir/src/PBSNode.cpp.s"
-	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\apoor\Downloads\RHCR-master\RHCR-master\src\PBSNode.cpp -o CMakeFiles\lifelong.dir\src\PBSNode.cpp.s
+	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\apoor\Downloads\RHCR-master\lifelong-mapf--rhcr-\RHCR-master\src\PBSNode.cpp -o CMakeFiles\lifelong.dir\src\PBSNode.cpp.s
 
 CMakeFiles/lifelong.dir/src/PathTable.cpp.obj: CMakeFiles/lifelong.dir/flags.make
 CMakeFiles/lifelong.dir/src/PathTable.cpp.obj: CMakeFiles/lifelong.dir/includes_CXX.rsp
-CMakeFiles/lifelong.dir/src/PathTable.cpp.obj: C:/Users/apoor/Downloads/RHCR-master/RHCR-master/src/PathTable.cpp
+CMakeFiles/lifelong.dir/src/PathTable.cpp.obj: C:/Users/apoor/Downloads/RHCR-master/lifelong-mapf--rhcr-/RHCR-master/src/PathTable.cpp
 CMakeFiles/lifelong.dir/src/PathTable.cpp.obj: CMakeFiles/lifelong.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\apoor\Downloads\RHCR-master\RHCR-master\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/lifelong.dir/src/PathTable.cpp.obj"
-	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lifelong.dir/src/PathTable.cpp.obj -MF CMakeFiles\lifelong.dir\src\PathTable.cpp.obj.d -o CMakeFiles\lifelong.dir\src\PathTable.cpp.obj -c C:\Users\apoor\Downloads\RHCR-master\RHCR-master\src\PathTable.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\apoor\Downloads\RHCR-master\lifelong-mapf--rhcr-\RHCR-master\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/lifelong.dir/src/PathTable.cpp.obj"
+	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lifelong.dir/src/PathTable.cpp.obj -MF CMakeFiles\lifelong.dir\src\PathTable.cpp.obj.d -o CMakeFiles\lifelong.dir\src\PathTable.cpp.obj -c C:\Users\apoor\Downloads\RHCR-master\lifelong-mapf--rhcr-\RHCR-master\src\PathTable.cpp
 
 CMakeFiles/lifelong.dir/src/PathTable.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/lifelong.dir/src/PathTable.cpp.i"
-	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\apoor\Downloads\RHCR-master\RHCR-master\src\PathTable.cpp > CMakeFiles\lifelong.dir\src\PathTable.cpp.i
+	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\apoor\Downloads\RHCR-master\lifelong-mapf--rhcr-\RHCR-master\src\PathTable.cpp > CMakeFiles\lifelong.dir\src\PathTable.cpp.i
 
 CMakeFiles/lifelong.dir/src/PathTable.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/lifelong.dir/src/PathTable.cpp.s"
-	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\apoor\Downloads\RHCR-master\RHCR-master\src\PathTable.cpp -o CMakeFiles\lifelong.dir\src\PathTable.cpp.s
+	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\apoor\Downloads\RHCR-master\lifelong-mapf--rhcr-\RHCR-master\src\PathTable.cpp -o CMakeFiles\lifelong.dir\src\PathTable.cpp.s
 
 CMakeFiles/lifelong.dir/src/PriorityGraph.cpp.obj: CMakeFiles/lifelong.dir/flags.make
 CMakeFiles/lifelong.dir/src/PriorityGraph.cpp.obj: CMakeFiles/lifelong.dir/includes_CXX.rsp
-CMakeFiles/lifelong.dir/src/PriorityGraph.cpp.obj: C:/Users/apoor/Downloads/RHCR-master/RHCR-master/src/PriorityGraph.cpp
+CMakeFiles/lifelong.dir/src/PriorityGraph.cpp.obj: C:/Users/apoor/Downloads/RHCR-master/lifelong-mapf--rhcr-/RHCR-master/src/PriorityGraph.cpp
 CMakeFiles/lifelong.dir/src/PriorityGraph.cpp.obj: CMakeFiles/lifelong.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\apoor\Downloads\RHCR-master\RHCR-master\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/lifelong.dir/src/PriorityGraph.cpp.obj"
-	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lifelong.dir/src/PriorityGraph.cpp.obj -MF CMakeFiles\lifelong.dir\src\PriorityGraph.cpp.obj.d -o CMakeFiles\lifelong.dir\src\PriorityGraph.cpp.obj -c C:\Users\apoor\Downloads\RHCR-master\RHCR-master\src\PriorityGraph.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\apoor\Downloads\RHCR-master\lifelong-mapf--rhcr-\RHCR-master\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/lifelong.dir/src/PriorityGraph.cpp.obj"
+	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lifelong.dir/src/PriorityGraph.cpp.obj -MF CMakeFiles\lifelong.dir\src\PriorityGraph.cpp.obj.d -o CMakeFiles\lifelong.dir\src\PriorityGraph.cpp.obj -c C:\Users\apoor\Downloads\RHCR-master\lifelong-mapf--rhcr-\RHCR-master\src\PriorityGraph.cpp
 
 CMakeFiles/lifelong.dir/src/PriorityGraph.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/lifelong.dir/src/PriorityGraph.cpp.i"
-	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\apoor\Downloads\RHCR-master\RHCR-master\src\PriorityGraph.cpp > CMakeFiles\lifelong.dir\src\PriorityGraph.cpp.i
+	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\apoor\Downloads\RHCR-master\lifelong-mapf--rhcr-\RHCR-master\src\PriorityGraph.cpp > CMakeFiles\lifelong.dir\src\PriorityGraph.cpp.i
 
 CMakeFiles/lifelong.dir/src/PriorityGraph.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/lifelong.dir/src/PriorityGraph.cpp.s"
-	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\apoor\Downloads\RHCR-master\RHCR-master\src\PriorityGraph.cpp -o CMakeFiles\lifelong.dir\src\PriorityGraph.cpp.s
+	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\apoor\Downloads\RHCR-master\lifelong-mapf--rhcr-\RHCR-master\src\PriorityGraph.cpp -o CMakeFiles\lifelong.dir\src\PriorityGraph.cpp.s
 
 CMakeFiles/lifelong.dir/src/ReservationTable.cpp.obj: CMakeFiles/lifelong.dir/flags.make
 CMakeFiles/lifelong.dir/src/ReservationTable.cpp.obj: CMakeFiles/lifelong.dir/includes_CXX.rsp
-CMakeFiles/lifelong.dir/src/ReservationTable.cpp.obj: C:/Users/apoor/Downloads/RHCR-master/RHCR-master/src/ReservationTable.cpp
+CMakeFiles/lifelong.dir/src/ReservationTable.cpp.obj: C:/Users/apoor/Downloads/RHCR-master/lifelong-mapf--rhcr-/RHCR-master/src/ReservationTable.cpp
 CMakeFiles/lifelong.dir/src/ReservationTable.cpp.obj: CMakeFiles/lifelong.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\apoor\Downloads\RHCR-master\RHCR-master\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/lifelong.dir/src/ReservationTable.cpp.obj"
-	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lifelong.dir/src/ReservationTable.cpp.obj -MF CMakeFiles\lifelong.dir\src\ReservationTable.cpp.obj.d -o CMakeFiles\lifelong.dir\src\ReservationTable.cpp.obj -c C:\Users\apoor\Downloads\RHCR-master\RHCR-master\src\ReservationTable.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\apoor\Downloads\RHCR-master\lifelong-mapf--rhcr-\RHCR-master\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/lifelong.dir/src/ReservationTable.cpp.obj"
+	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lifelong.dir/src/ReservationTable.cpp.obj -MF CMakeFiles\lifelong.dir\src\ReservationTable.cpp.obj.d -o CMakeFiles\lifelong.dir\src\ReservationTable.cpp.obj -c C:\Users\apoor\Downloads\RHCR-master\lifelong-mapf--rhcr-\RHCR-master\src\ReservationTable.cpp
 
 CMakeFiles/lifelong.dir/src/ReservationTable.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/lifelong.dir/src/ReservationTable.cpp.i"
-	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\apoor\Downloads\RHCR-master\RHCR-master\src\ReservationTable.cpp > CMakeFiles\lifelong.dir\src\ReservationTable.cpp.i
+	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\apoor\Downloads\RHCR-master\lifelong-mapf--rhcr-\RHCR-master\src\ReservationTable.cpp > CMakeFiles\lifelong.dir\src\ReservationTable.cpp.i
 
 CMakeFiles/lifelong.dir/src/ReservationTable.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/lifelong.dir/src/ReservationTable.cpp.s"
-	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\apoor\Downloads\RHCR-master\RHCR-master\src\ReservationTable.cpp -o CMakeFiles\lifelong.dir\src\ReservationTable.cpp.s
+	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\apoor\Downloads\RHCR-master\lifelong-mapf--rhcr-\RHCR-master\src\ReservationTable.cpp -o CMakeFiles\lifelong.dir\src\ReservationTable.cpp.s
 
 CMakeFiles/lifelong.dir/src/SIPP.cpp.obj: CMakeFiles/lifelong.dir/flags.make
 CMakeFiles/lifelong.dir/src/SIPP.cpp.obj: CMakeFiles/lifelong.dir/includes_CXX.rsp
-CMakeFiles/lifelong.dir/src/SIPP.cpp.obj: C:/Users/apoor/Downloads/RHCR-master/RHCR-master/src/SIPP.cpp
+CMakeFiles/lifelong.dir/src/SIPP.cpp.obj: C:/Users/apoor/Downloads/RHCR-master/lifelong-mapf--rhcr-/RHCR-master/src/SIPP.cpp
 CMakeFiles/lifelong.dir/src/SIPP.cpp.obj: CMakeFiles/lifelong.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\apoor\Downloads\RHCR-master\RHCR-master\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/lifelong.dir/src/SIPP.cpp.obj"
-	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lifelong.dir/src/SIPP.cpp.obj -MF CMakeFiles\lifelong.dir\src\SIPP.cpp.obj.d -o CMakeFiles\lifelong.dir\src\SIPP.cpp.obj -c C:\Users\apoor\Downloads\RHCR-master\RHCR-master\src\SIPP.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\apoor\Downloads\RHCR-master\lifelong-mapf--rhcr-\RHCR-master\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/lifelong.dir/src/SIPP.cpp.obj"
+	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lifelong.dir/src/SIPP.cpp.obj -MF CMakeFiles\lifelong.dir\src\SIPP.cpp.obj.d -o CMakeFiles\lifelong.dir\src\SIPP.cpp.obj -c C:\Users\apoor\Downloads\RHCR-master\lifelong-mapf--rhcr-\RHCR-master\src\SIPP.cpp
 
 CMakeFiles/lifelong.dir/src/SIPP.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/lifelong.dir/src/SIPP.cpp.i"
-	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\apoor\Downloads\RHCR-master\RHCR-master\src\SIPP.cpp > CMakeFiles\lifelong.dir\src\SIPP.cpp.i
+	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\apoor\Downloads\RHCR-master\lifelong-mapf--rhcr-\RHCR-master\src\SIPP.cpp > CMakeFiles\lifelong.dir\src\SIPP.cpp.i
 
 CMakeFiles/lifelong.dir/src/SIPP.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/lifelong.dir/src/SIPP.cpp.s"
-	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\apoor\Downloads\RHCR-master\RHCR-master\src\SIPP.cpp -o CMakeFiles\lifelong.dir\src\SIPP.cpp.s
+	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\apoor\Downloads\RHCR-master\lifelong-mapf--rhcr-\RHCR-master\src\SIPP.cpp -o CMakeFiles\lifelong.dir\src\SIPP.cpp.s
 
 CMakeFiles/lifelong.dir/src/SingleAgentSolver.cpp.obj: CMakeFiles/lifelong.dir/flags.make
 CMakeFiles/lifelong.dir/src/SingleAgentSolver.cpp.obj: CMakeFiles/lifelong.dir/includes_CXX.rsp
-CMakeFiles/lifelong.dir/src/SingleAgentSolver.cpp.obj: C:/Users/apoor/Downloads/RHCR-master/RHCR-master/src/SingleAgentSolver.cpp
+CMakeFiles/lifelong.dir/src/SingleAgentSolver.cpp.obj: C:/Users/apoor/Downloads/RHCR-master/lifelong-mapf--rhcr-/RHCR-master/src/SingleAgentSolver.cpp
 CMakeFiles/lifelong.dir/src/SingleAgentSolver.cpp.obj: CMakeFiles/lifelong.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\apoor\Downloads\RHCR-master\RHCR-master\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/lifelong.dir/src/SingleAgentSolver.cpp.obj"
-	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lifelong.dir/src/SingleAgentSolver.cpp.obj -MF CMakeFiles\lifelong.dir\src\SingleAgentSolver.cpp.obj.d -o CMakeFiles\lifelong.dir\src\SingleAgentSolver.cpp.obj -c C:\Users\apoor\Downloads\RHCR-master\RHCR-master\src\SingleAgentSolver.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\apoor\Downloads\RHCR-master\lifelong-mapf--rhcr-\RHCR-master\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/lifelong.dir/src/SingleAgentSolver.cpp.obj"
+	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lifelong.dir/src/SingleAgentSolver.cpp.obj -MF CMakeFiles\lifelong.dir\src\SingleAgentSolver.cpp.obj.d -o CMakeFiles\lifelong.dir\src\SingleAgentSolver.cpp.obj -c C:\Users\apoor\Downloads\RHCR-master\lifelong-mapf--rhcr-\RHCR-master\src\SingleAgentSolver.cpp
 
 CMakeFiles/lifelong.dir/src/SingleAgentSolver.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/lifelong.dir/src/SingleAgentSolver.cpp.i"
-	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\apoor\Downloads\RHCR-master\RHCR-master\src\SingleAgentSolver.cpp > CMakeFiles\lifelong.dir\src\SingleAgentSolver.cpp.i
+	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\apoor\Downloads\RHCR-master\lifelong-mapf--rhcr-\RHCR-master\src\SingleAgentSolver.cpp > CMakeFiles\lifelong.dir\src\SingleAgentSolver.cpp.i
 
 CMakeFiles/lifelong.dir/src/SingleAgentSolver.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/lifelong.dir/src/SingleAgentSolver.cpp.s"
-	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\apoor\Downloads\RHCR-master\RHCR-master\src\SingleAgentSolver.cpp -o CMakeFiles\lifelong.dir\src\SingleAgentSolver.cpp.s
+	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\apoor\Downloads\RHCR-master\lifelong-mapf--rhcr-\RHCR-master\src\SingleAgentSolver.cpp -o CMakeFiles\lifelong.dir\src\SingleAgentSolver.cpp.s
 
 CMakeFiles/lifelong.dir/src/SortingGraph.cpp.obj: CMakeFiles/lifelong.dir/flags.make
 CMakeFiles/lifelong.dir/src/SortingGraph.cpp.obj: CMakeFiles/lifelong.dir/includes_CXX.rsp
-CMakeFiles/lifelong.dir/src/SortingGraph.cpp.obj: C:/Users/apoor/Downloads/RHCR-master/RHCR-master/src/SortingGraph.cpp
+CMakeFiles/lifelong.dir/src/SortingGraph.cpp.obj: C:/Users/apoor/Downloads/RHCR-master/lifelong-mapf--rhcr-/RHCR-master/src/SortingGraph.cpp
 CMakeFiles/lifelong.dir/src/SortingGraph.cpp.obj: CMakeFiles/lifelong.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\apoor\Downloads\RHCR-master\RHCR-master\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/lifelong.dir/src/SortingGraph.cpp.obj"
-	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lifelong.dir/src/SortingGraph.cpp.obj -MF CMakeFiles\lifelong.dir\src\SortingGraph.cpp.obj.d -o CMakeFiles\lifelong.dir\src\SortingGraph.cpp.obj -c C:\Users\apoor\Downloads\RHCR-master\RHCR-master\src\SortingGraph.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\apoor\Downloads\RHCR-master\lifelong-mapf--rhcr-\RHCR-master\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/lifelong.dir/src/SortingGraph.cpp.obj"
+	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lifelong.dir/src/SortingGraph.cpp.obj -MF CMakeFiles\lifelong.dir\src\SortingGraph.cpp.obj.d -o CMakeFiles\lifelong.dir\src\SortingGraph.cpp.obj -c C:\Users\apoor\Downloads\RHCR-master\lifelong-mapf--rhcr-\RHCR-master\src\SortingGraph.cpp
 
 CMakeFiles/lifelong.dir/src/SortingGraph.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/lifelong.dir/src/SortingGraph.cpp.i"
-	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\apoor\Downloads\RHCR-master\RHCR-master\src\SortingGraph.cpp > CMakeFiles\lifelong.dir\src\SortingGraph.cpp.i
+	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\apoor\Downloads\RHCR-master\lifelong-mapf--rhcr-\RHCR-master\src\SortingGraph.cpp > CMakeFiles\lifelong.dir\src\SortingGraph.cpp.i
 
 CMakeFiles/lifelong.dir/src/SortingGraph.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/lifelong.dir/src/SortingGraph.cpp.s"
-	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\apoor\Downloads\RHCR-master\RHCR-master\src\SortingGraph.cpp -o CMakeFiles\lifelong.dir\src\SortingGraph.cpp.s
+	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\apoor\Downloads\RHCR-master\lifelong-mapf--rhcr-\RHCR-master\src\SortingGraph.cpp -o CMakeFiles\lifelong.dir\src\SortingGraph.cpp.s
 
 CMakeFiles/lifelong.dir/src/SortingSystem.cpp.obj: CMakeFiles/lifelong.dir/flags.make
 CMakeFiles/lifelong.dir/src/SortingSystem.cpp.obj: CMakeFiles/lifelong.dir/includes_CXX.rsp
-CMakeFiles/lifelong.dir/src/SortingSystem.cpp.obj: C:/Users/apoor/Downloads/RHCR-master/RHCR-master/src/SortingSystem.cpp
+CMakeFiles/lifelong.dir/src/SortingSystem.cpp.obj: C:/Users/apoor/Downloads/RHCR-master/lifelong-mapf--rhcr-/RHCR-master/src/SortingSystem.cpp
 CMakeFiles/lifelong.dir/src/SortingSystem.cpp.obj: CMakeFiles/lifelong.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\apoor\Downloads\RHCR-master\RHCR-master\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/lifelong.dir/src/SortingSystem.cpp.obj"
-	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lifelong.dir/src/SortingSystem.cpp.obj -MF CMakeFiles\lifelong.dir\src\SortingSystem.cpp.obj.d -o CMakeFiles\lifelong.dir\src\SortingSystem.cpp.obj -c C:\Users\apoor\Downloads\RHCR-master\RHCR-master\src\SortingSystem.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\apoor\Downloads\RHCR-master\lifelong-mapf--rhcr-\RHCR-master\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/lifelong.dir/src/SortingSystem.cpp.obj"
+	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lifelong.dir/src/SortingSystem.cpp.obj -MF CMakeFiles\lifelong.dir\src\SortingSystem.cpp.obj.d -o CMakeFiles\lifelong.dir\src\SortingSystem.cpp.obj -c C:\Users\apoor\Downloads\RHCR-master\lifelong-mapf--rhcr-\RHCR-master\src\SortingSystem.cpp
 
 CMakeFiles/lifelong.dir/src/SortingSystem.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/lifelong.dir/src/SortingSystem.cpp.i"
-	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\apoor\Downloads\RHCR-master\RHCR-master\src\SortingSystem.cpp > CMakeFiles\lifelong.dir\src\SortingSystem.cpp.i
+	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\apoor\Downloads\RHCR-master\lifelong-mapf--rhcr-\RHCR-master\src\SortingSystem.cpp > CMakeFiles\lifelong.dir\src\SortingSystem.cpp.i
 
 CMakeFiles/lifelong.dir/src/SortingSystem.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/lifelong.dir/src/SortingSystem.cpp.s"
-	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\apoor\Downloads\RHCR-master\RHCR-master\src\SortingSystem.cpp -o CMakeFiles\lifelong.dir\src\SortingSystem.cpp.s
+	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\apoor\Downloads\RHCR-master\lifelong-mapf--rhcr-\RHCR-master\src\SortingSystem.cpp -o CMakeFiles\lifelong.dir\src\SortingSystem.cpp.s
 
 CMakeFiles/lifelong.dir/src/StateTimeAStar.cpp.obj: CMakeFiles/lifelong.dir/flags.make
 CMakeFiles/lifelong.dir/src/StateTimeAStar.cpp.obj: CMakeFiles/lifelong.dir/includes_CXX.rsp
-CMakeFiles/lifelong.dir/src/StateTimeAStar.cpp.obj: C:/Users/apoor/Downloads/RHCR-master/RHCR-master/src/StateTimeAStar.cpp
+CMakeFiles/lifelong.dir/src/StateTimeAStar.cpp.obj: C:/Users/apoor/Downloads/RHCR-master/lifelong-mapf--rhcr-/RHCR-master/src/StateTimeAStar.cpp
 CMakeFiles/lifelong.dir/src/StateTimeAStar.cpp.obj: CMakeFiles/lifelong.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\apoor\Downloads\RHCR-master\RHCR-master\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/lifelong.dir/src/StateTimeAStar.cpp.obj"
-	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lifelong.dir/src/StateTimeAStar.cpp.obj -MF CMakeFiles\lifelong.dir\src\StateTimeAStar.cpp.obj.d -o CMakeFiles\lifelong.dir\src\StateTimeAStar.cpp.obj -c C:\Users\apoor\Downloads\RHCR-master\RHCR-master\src\StateTimeAStar.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\apoor\Downloads\RHCR-master\lifelong-mapf--rhcr-\RHCR-master\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/lifelong.dir/src/StateTimeAStar.cpp.obj"
+	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lifelong.dir/src/StateTimeAStar.cpp.obj -MF CMakeFiles\lifelong.dir\src\StateTimeAStar.cpp.obj.d -o CMakeFiles\lifelong.dir\src\StateTimeAStar.cpp.obj -c C:\Users\apoor\Downloads\RHCR-master\lifelong-mapf--rhcr-\RHCR-master\src\StateTimeAStar.cpp
 
 CMakeFiles/lifelong.dir/src/StateTimeAStar.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/lifelong.dir/src/StateTimeAStar.cpp.i"
-	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\apoor\Downloads\RHCR-master\RHCR-master\src\StateTimeAStar.cpp > CMakeFiles\lifelong.dir\src\StateTimeAStar.cpp.i
+	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\apoor\Downloads\RHCR-master\lifelong-mapf--rhcr-\RHCR-master\src\StateTimeAStar.cpp > CMakeFiles\lifelong.dir\src\StateTimeAStar.cpp.i
 
 CMakeFiles/lifelong.dir/src/StateTimeAStar.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/lifelong.dir/src/StateTimeAStar.cpp.s"
-	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\apoor\Downloads\RHCR-master\RHCR-master\src\StateTimeAStar.cpp -o CMakeFiles\lifelong.dir\src\StateTimeAStar.cpp.s
+	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\apoor\Downloads\RHCR-master\lifelong-mapf--rhcr-\RHCR-master\src\StateTimeAStar.cpp -o CMakeFiles\lifelong.dir\src\StateTimeAStar.cpp.s
 
 CMakeFiles/lifelong.dir/src/States.cpp.obj: CMakeFiles/lifelong.dir/flags.make
 CMakeFiles/lifelong.dir/src/States.cpp.obj: CMakeFiles/lifelong.dir/includes_CXX.rsp
-CMakeFiles/lifelong.dir/src/States.cpp.obj: C:/Users/apoor/Downloads/RHCR-master/RHCR-master/src/States.cpp
+CMakeFiles/lifelong.dir/src/States.cpp.obj: C:/Users/apoor/Downloads/RHCR-master/lifelong-mapf--rhcr-/RHCR-master/src/States.cpp
 CMakeFiles/lifelong.dir/src/States.cpp.obj: CMakeFiles/lifelong.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\apoor\Downloads\RHCR-master\RHCR-master\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/lifelong.dir/src/States.cpp.obj"
-	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lifelong.dir/src/States.cpp.obj -MF CMakeFiles\lifelong.dir\src\States.cpp.obj.d -o CMakeFiles\lifelong.dir\src\States.cpp.obj -c C:\Users\apoor\Downloads\RHCR-master\RHCR-master\src\States.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\apoor\Downloads\RHCR-master\lifelong-mapf--rhcr-\RHCR-master\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/lifelong.dir/src/States.cpp.obj"
+	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lifelong.dir/src/States.cpp.obj -MF CMakeFiles\lifelong.dir\src\States.cpp.obj.d -o CMakeFiles\lifelong.dir\src\States.cpp.obj -c C:\Users\apoor\Downloads\RHCR-master\lifelong-mapf--rhcr-\RHCR-master\src\States.cpp
 
 CMakeFiles/lifelong.dir/src/States.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/lifelong.dir/src/States.cpp.i"
-	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\apoor\Downloads\RHCR-master\RHCR-master\src\States.cpp > CMakeFiles\lifelong.dir\src\States.cpp.i
+	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\apoor\Downloads\RHCR-master\lifelong-mapf--rhcr-\RHCR-master\src\States.cpp > CMakeFiles\lifelong.dir\src\States.cpp.i
 
 CMakeFiles/lifelong.dir/src/States.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/lifelong.dir/src/States.cpp.s"
-	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\apoor\Downloads\RHCR-master\RHCR-master\src\States.cpp -o CMakeFiles\lifelong.dir\src\States.cpp.s
+	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\apoor\Downloads\RHCR-master\lifelong-mapf--rhcr-\RHCR-master\src\States.cpp -o CMakeFiles\lifelong.dir\src\States.cpp.s
 
 CMakeFiles/lifelong.dir/src/WHCAStar.cpp.obj: CMakeFiles/lifelong.dir/flags.make
 CMakeFiles/lifelong.dir/src/WHCAStar.cpp.obj: CMakeFiles/lifelong.dir/includes_CXX.rsp
-CMakeFiles/lifelong.dir/src/WHCAStar.cpp.obj: C:/Users/apoor/Downloads/RHCR-master/RHCR-master/src/WHCAStar.cpp
+CMakeFiles/lifelong.dir/src/WHCAStar.cpp.obj: C:/Users/apoor/Downloads/RHCR-master/lifelong-mapf--rhcr-/RHCR-master/src/WHCAStar.cpp
 CMakeFiles/lifelong.dir/src/WHCAStar.cpp.obj: CMakeFiles/lifelong.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\apoor\Downloads\RHCR-master\RHCR-master\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object CMakeFiles/lifelong.dir/src/WHCAStar.cpp.obj"
-	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lifelong.dir/src/WHCAStar.cpp.obj -MF CMakeFiles\lifelong.dir\src\WHCAStar.cpp.obj.d -o CMakeFiles\lifelong.dir\src\WHCAStar.cpp.obj -c C:\Users\apoor\Downloads\RHCR-master\RHCR-master\src\WHCAStar.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\apoor\Downloads\RHCR-master\lifelong-mapf--rhcr-\RHCR-master\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object CMakeFiles/lifelong.dir/src/WHCAStar.cpp.obj"
+	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lifelong.dir/src/WHCAStar.cpp.obj -MF CMakeFiles\lifelong.dir\src\WHCAStar.cpp.obj.d -o CMakeFiles\lifelong.dir\src\WHCAStar.cpp.obj -c C:\Users\apoor\Downloads\RHCR-master\lifelong-mapf--rhcr-\RHCR-master\src\WHCAStar.cpp
 
 CMakeFiles/lifelong.dir/src/WHCAStar.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/lifelong.dir/src/WHCAStar.cpp.i"
-	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\apoor\Downloads\RHCR-master\RHCR-master\src\WHCAStar.cpp > CMakeFiles\lifelong.dir\src\WHCAStar.cpp.i
+	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\apoor\Downloads\RHCR-master\lifelong-mapf--rhcr-\RHCR-master\src\WHCAStar.cpp > CMakeFiles\lifelong.dir\src\WHCAStar.cpp.i
 
 CMakeFiles/lifelong.dir/src/WHCAStar.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/lifelong.dir/src/WHCAStar.cpp.s"
-	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\apoor\Downloads\RHCR-master\RHCR-master\src\WHCAStar.cpp -o CMakeFiles\lifelong.dir\src\WHCAStar.cpp.s
+	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\apoor\Downloads\RHCR-master\lifelong-mapf--rhcr-\RHCR-master\src\WHCAStar.cpp -o CMakeFiles\lifelong.dir\src\WHCAStar.cpp.s
 
 CMakeFiles/lifelong.dir/src/common.cpp.obj: CMakeFiles/lifelong.dir/flags.make
 CMakeFiles/lifelong.dir/src/common.cpp.obj: CMakeFiles/lifelong.dir/includes_CXX.rsp
-CMakeFiles/lifelong.dir/src/common.cpp.obj: C:/Users/apoor/Downloads/RHCR-master/RHCR-master/src/common.cpp
+CMakeFiles/lifelong.dir/src/common.cpp.obj: C:/Users/apoor/Downloads/RHCR-master/lifelong-mapf--rhcr-/RHCR-master/src/common.cpp
 CMakeFiles/lifelong.dir/src/common.cpp.obj: CMakeFiles/lifelong.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\apoor\Downloads\RHCR-master\RHCR-master\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object CMakeFiles/lifelong.dir/src/common.cpp.obj"
-	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lifelong.dir/src/common.cpp.obj -MF CMakeFiles\lifelong.dir\src\common.cpp.obj.d -o CMakeFiles\lifelong.dir\src\common.cpp.obj -c C:\Users\apoor\Downloads\RHCR-master\RHCR-master\src\common.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\apoor\Downloads\RHCR-master\lifelong-mapf--rhcr-\RHCR-master\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object CMakeFiles/lifelong.dir/src/common.cpp.obj"
+	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lifelong.dir/src/common.cpp.obj -MF CMakeFiles\lifelong.dir\src\common.cpp.obj.d -o CMakeFiles\lifelong.dir\src\common.cpp.obj -c C:\Users\apoor\Downloads\RHCR-master\lifelong-mapf--rhcr-\RHCR-master\src\common.cpp
 
 CMakeFiles/lifelong.dir/src/common.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/lifelong.dir/src/common.cpp.i"
-	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\apoor\Downloads\RHCR-master\RHCR-master\src\common.cpp > CMakeFiles\lifelong.dir\src\common.cpp.i
+	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\apoor\Downloads\RHCR-master\lifelong-mapf--rhcr-\RHCR-master\src\common.cpp > CMakeFiles\lifelong.dir\src\common.cpp.i
 
 CMakeFiles/lifelong.dir/src/common.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/lifelong.dir/src/common.cpp.s"
-	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\apoor\Downloads\RHCR-master\RHCR-master\src\common.cpp -o CMakeFiles\lifelong.dir\src\common.cpp.s
+	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\apoor\Downloads\RHCR-master\lifelong-mapf--rhcr-\RHCR-master\src\common.cpp -o CMakeFiles\lifelong.dir\src\common.cpp.s
 
 CMakeFiles/lifelong.dir/src/driver.cpp.obj: CMakeFiles/lifelong.dir/flags.make
 CMakeFiles/lifelong.dir/src/driver.cpp.obj: CMakeFiles/lifelong.dir/includes_CXX.rsp
-CMakeFiles/lifelong.dir/src/driver.cpp.obj: C:/Users/apoor/Downloads/RHCR-master/RHCR-master/src/driver.cpp
+CMakeFiles/lifelong.dir/src/driver.cpp.obj: C:/Users/apoor/Downloads/RHCR-master/lifelong-mapf--rhcr-/RHCR-master/src/driver.cpp
 CMakeFiles/lifelong.dir/src/driver.cpp.obj: CMakeFiles/lifelong.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\apoor\Downloads\RHCR-master\RHCR-master\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object CMakeFiles/lifelong.dir/src/driver.cpp.obj"
-	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lifelong.dir/src/driver.cpp.obj -MF CMakeFiles\lifelong.dir\src\driver.cpp.obj.d -o CMakeFiles\lifelong.dir\src\driver.cpp.obj -c C:\Users\apoor\Downloads\RHCR-master\RHCR-master\src\driver.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\apoor\Downloads\RHCR-master\lifelong-mapf--rhcr-\RHCR-master\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object CMakeFiles/lifelong.dir/src/driver.cpp.obj"
+	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lifelong.dir/src/driver.cpp.obj -MF CMakeFiles\lifelong.dir\src\driver.cpp.obj.d -o CMakeFiles\lifelong.dir\src\driver.cpp.obj -c C:\Users\apoor\Downloads\RHCR-master\lifelong-mapf--rhcr-\RHCR-master\src\driver.cpp
 
 CMakeFiles/lifelong.dir/src/driver.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/lifelong.dir/src/driver.cpp.i"
-	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\apoor\Downloads\RHCR-master\RHCR-master\src\driver.cpp > CMakeFiles\lifelong.dir\src\driver.cpp.i
+	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\apoor\Downloads\RHCR-master\lifelong-mapf--rhcr-\RHCR-master\src\driver.cpp > CMakeFiles\lifelong.dir\src\driver.cpp.i
 
 CMakeFiles/lifelong.dir/src/driver.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/lifelong.dir/src/driver.cpp.s"
-	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\apoor\Downloads\RHCR-master\RHCR-master\src\driver.cpp -o CMakeFiles\lifelong.dir\src\driver.cpp.s
+	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\apoor\Downloads\RHCR-master\lifelong-mapf--rhcr-\RHCR-master\src\driver.cpp -o CMakeFiles\lifelong.dir\src\driver.cpp.s
 
 # Object files for target lifelong
 lifelong_OBJECTS = \
@@ -543,7 +543,7 @@ lifelong.exe: C:/msys64/mingw64/lib/libboost_container-mt.dll.a
 lifelong.exe: CMakeFiles/lifelong.dir/linkLibs.rsp
 lifelong.exe: CMakeFiles/lifelong.dir/objects1.rsp
 lifelong.exe: CMakeFiles/lifelong.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\apoor\Downloads\RHCR-master\RHCR-master\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Linking CXX executable lifelong.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\apoor\Downloads\RHCR-master\lifelong-mapf--rhcr-\RHCR-master\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Linking CXX executable lifelong.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\lifelong.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -555,6 +555,6 @@ CMakeFiles/lifelong.dir/clean:
 .PHONY : CMakeFiles/lifelong.dir/clean
 
 CMakeFiles/lifelong.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\apoor\Downloads\RHCR-master\RHCR-master C:\Users\apoor\Downloads\RHCR-master\RHCR-master C:\Users\apoor\Downloads\RHCR-master\RHCR-master\build C:\Users\apoor\Downloads\RHCR-master\RHCR-master\build C:\Users\apoor\Downloads\RHCR-master\RHCR-master\build\CMakeFiles\lifelong.dir\DependInfo.cmake "--color=$(COLOR)"
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\apoor\Downloads\RHCR-master\lifelong-mapf--rhcr-\RHCR-master C:\Users\apoor\Downloads\RHCR-master\lifelong-mapf--rhcr-\RHCR-master C:\Users\apoor\Downloads\RHCR-master\lifelong-mapf--rhcr-\RHCR-master\build C:\Users\apoor\Downloads\RHCR-master\lifelong-mapf--rhcr-\RHCR-master\build C:\Users\apoor\Downloads\RHCR-master\lifelong-mapf--rhcr-\RHCR-master\build\CMakeFiles\lifelong.dir\DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/lifelong.dir/depend
 
