@@ -18,10 +18,11 @@ private:
 	std::vector<std::vector<int>> zone_endpoints;
 	std::unordered_map<int, int> endpoint_to_zone;
 	std::vector<int> agent_zone;
-
+	std::vector<std::queue<int>> zone_task_batches;
 	void initialize();
 	void initialize_start_locations();
 	void initialize_goal_locations();
 	void update_goal_locations();
 	void initialize_zones();
+	void generate_zone_task_batch();
 };
