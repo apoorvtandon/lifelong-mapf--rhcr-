@@ -5,7 +5,7 @@ solver: ECBS
 time_limit: 60
 simulation_window: 10
 planning_window: 1073741823
-simulation_time: 500
+simulation_time: 400
 robust: 0
 rotate: 0
 use_dummy_paths: 0

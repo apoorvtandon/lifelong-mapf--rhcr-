@@ -2,7 +2,7 @@
 #include "SIPP.h"
 #include "MAPFSolver.h"
 #include <ctime>
-
+#include<random>
 // WHCA* with random restart
 class WHCAStar :
 	public MAPFSolver

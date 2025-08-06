@@ -14,6 +14,7 @@ public:
 
 private:
 	const KivaGrid& G;
+	const int PICKUP_BATCH_SIZE = 3;
 	unordered_set<int> held_endpoints;
 	std::vector<std::vector<int>> zone_endpoints;
 	std::unordered_map<int, int> endpoint_to_zone;
@@ -21,8 +22,8 @@ private:
 	std::vector<std::queue<int>> zone_task_batches;
 	void initialize();
 	void initialize_start_locations();
-	void initialize_goal_locations();
-	void update_goal_locations();
+	void initialize_goal_locations(int capacity );
+	void update_goal_locations(int capacity);
 	void initialize_zones();
 	void generate_zone_task_batch();
 };

@@ -50,6 +50,56 @@ void KivaSystem::generate_zone_task_batch() {
     }
    // std::cout << "[Batch] Added " << total << " new tasks to zones\n";
 }
+std::vector<int> getOptimalPickupOrder(const std::vector<int>& pickups, const BasicGraph& G, int start) {
+    int n = pickups.size();
+    std::vector<std::vector<int>> dp(1 << n, std::vector<int>(n, INT_MAX));
+    std::vector<std::vector<int>> parent(1 << n, std::vector<int>(n, -1));
+
+    // Base case: cost from start to each pickup
+    for (int i = 0; i < n; ++i) {
+        dp[1 << i][i] = G.get_Manhattan_distance(start, pickups[i]);
+    }
+
+    // DP over subsets
+    for (int mask = 1; mask < (1 << n); ++mask) {
+        for (int u = 0; u < n; ++u) {
+            if (!(mask & (1 << u))) continue;
+            for (int v = 0; v < n; ++v) {
+                if (mask & (1 << v)) continue;
+                int nextMask = mask | (1 << v);
+                int newDist = dp[mask][u] + G.get_Manhattan_distance(pickups[u], pickups[v]);
+                if (newDist < dp[nextMask][v]) {
+                    dp[nextMask][v] = newDist;
+                    parent[nextMask][v] = u;
+                }
+            }
+        }
+    }
+
+    // Find best last pickup
+    int best_cost = INT_MAX;
+    int last = -1;
+    int final_mask = (1 << n) - 1;
+    for (int i = 0; i < n; ++i) {
+        if (dp[final_mask][i] < best_cost) {
+            best_cost = dp[final_mask][i];
+            last = i;
+        }
+    }
+
+    // Reconstruct path
+    std::vector<int> order;
+    int mask = final_mask;
+    while (last != -1) {
+        order.push_back(pickups[last]);
+        int temp = parent[mask][last];
+        mask ^= (1 << last);
+        last = temp;
+    }
+
+    std::reverse(order.begin(), order.end());
+    return order;
+}
 
 void KivaSystem::initialize() {
     initialize_solvers();
@@ -73,41 +123,81 @@ void KivaSystem::initialize() {
 
 void KivaSystem::initialize_start_locations() {
     std::vector<int> zone_count(6, 0);
+    auto pickups = G.pickup_locations;  // make a local copy to shuffle
+
+    if (pickups.size() < num_of_drives) {
+        std::cerr << "Not enough pickup locations for all agents!" << std::endl;
+        return;
+    }
+
+    // Shuffle pickups randomly using a random device
+    std::random_device rd;
+    std::mt19937 g(rd());
+    std::shuffle(pickups.begin(), pickups.end(), g);
 
     for (int k = 0; k < num_of_drives; ++k) {
-        int home = G.agent_home_locations[k];
+        int home = pickups[k % pickups.size()];  // Now randomized
+
         starts[k] = State(home, 0, consider_rotation ? rand() % 4 : -1);
         paths[k].push_back(starts[k]);
         finished_tasks[k].emplace_back(home, 0);
 
+        // Assign zone with least agents so far
         int min_zone = 0;
         for (int z = 1; z < 6; ++z)
             if (zone_count[z] < zone_count[min_zone]) min_zone = z;
 
         agent_zone[k] = min_zone;
         zone_count[min_zone]++;
-
-     //   std::cout << "Agent " << k << " assigned to zone " << min_zone << std::endl;
+        
+       // std::cout << "Agent " << k << "   starts at " << home << " and is assigned to zone " << min_zone << std::endl;
     }
 }
 
-void KivaSystem::initialize_goal_locations() {
+
+void KivaSystem::initialize_goal_locations(int capacity) {
     if (hold_endpoints || useDummyPaths) return;
+ 
+
+    std::random_device rd;
+    std::mt19937 g(rd());
 
     for (int k = 0; k < num_of_drives; ++k) {
         int zone = agent_zone[k];
-        if (!zone_task_batches[zone].empty()) {
-            int goal = zone_task_batches[zone].front(); zone_task_batches[zone].pop();
-            goal_locations[k].emplace_back(goal, 0);
-          //  std::cout << "[Init Goal] Agent " << k << " gets " << goal << " in zone " << zone << std::endl;
+
+        std::vector<int> raw_pickups;
+        for (int i = 0; i < capacity && !zone_task_batches[zone].empty(); ++i) {
+            raw_pickups.push_back(zone_task_batches[zone].front());
+            zone_task_batches[zone].pop();
         }
-        else{
-            std::cout<<"No task to allot"<<std::endl;
+
+        if (raw_pickups.empty()) {
+            std::cout << "No task to allot for agent " << k << std::endl;
+            continue;
+        }
+
+        // Compute optimal order using Held-Karp TSP
+        std::vector<int> ordered_pickups = getOptimalPickupOrder(raw_pickups, G, starts[k].location);
+
+        // Add pickups in order
+        for (int goal : ordered_pickups) {
+            goal_locations[k].emplace_back(goal, 0);
+        }
+
+        // Add one dropoff at end
+        if (!G.dropoff_locations.empty()) {
+            std::uniform_int_distribution<> dist(0, G.dropoff_locations.size() - 1);
+            int dropoff = G.dropoff_locations[dist(g)];
+            goal_locations[k].emplace_back(dropoff, 0);
+            // std::cout << "[Init Goal] Agent " << k << ": Pickups " << ordered_pickups.size() << " → Dropoff " << dropoff << std::endl;
+        } else {
+            std::cerr << "No dropoff locations defined in the graph!" << std::endl;
         }
     }
 }
 
-void KivaSystem::update_goal_locations() {
+
+void KivaSystem::update_goal_locations(int capacity) {
     if (!LRA_called)
         new_agents.clear();
 
@@ -169,12 +259,12 @@ void KivaSystem::update_goal_locations() {
     } else {
         for (int k = 0; k < num_of_drives; k++) {
             int curr = paths[k][timestep].location;
-
+    
             if (useDummyPaths) {
                 if (goal_locations[k].empty()) {
                     goal_locations[k].emplace_back(G.agent_home_locations[k], 0);
                 }
-
+    
                 if (goal_locations[k].size() == 1) {
                     int zone = agent_zone[k];
                     if (!zone_task_batches[zone].empty()) {
@@ -185,32 +275,43 @@ void KivaSystem::update_goal_locations() {
                     }
                 }
             } else {
-                auto goal = goal_locations[k].empty()
-                            ? std::make_pair(curr, 0)
-                            : goal_locations[k].back();
-
-                double min_timesteps = G.get_Manhattan_distance(goal.first, curr);
-
-                while (min_timesteps <= simulation_window) {
+                if (goal_locations[k].empty() ||
+                    (goal_locations[k].size() == 1 &&
+                     paths[k].back().location == goal_locations[k].back().first &&
+                     paths[k].back().timestep >= goal_locations[k].back().second)) {
+    
                     int zone = agent_zone[k];
-                    if (zone_task_batches[zone].empty()) break;
-
-                    int next_loc = zone_task_batches[zone].front();
-                    zone_task_batches[zone].pop();
-
-                    if (next_loc == goal.first) continue;
-
-                    auto next = std::make_pair(next_loc, 0);
-                    goal_locations[k].emplace_back(next);
-                    min_timesteps += G.get_Manhattan_distance(next.first, goal.first);
-                    goal = next;
-
-                    new_agents.emplace_back(k);
+                    std::vector<int> new_pickups;
+                     
+    
+                    for (int i = 0; i < capacity && !zone_task_batches[zone].empty(); ++i) {
+                        int next = zone_task_batches[zone].front();
+                        zone_task_batches[zone].pop();
+                        new_pickups.push_back(next);
+                    }
+    
+                    if (!new_pickups.empty()) {
+                        std::vector<int> ordered = getOptimalPickupOrder(new_pickups, G, curr);
+    
+                        // Add pickups
+                        for (int id : ordered)
+                            goal_locations[k].emplace_back(id, 0);
+    
+                        // Add one dropoff
+                        if (!G.dropoff_locations.empty()) {
+                            int drop = G.dropoff_locations[k % G.dropoff_locations.size()];
+                            goal_locations[k].emplace_back(drop, 0);
+                        }
+    
+                        new_agents.emplace_back(k);
+                    }
                 }
             }
         }
     }
 }
+    
+
 
 
 void KivaSystem::simulate(int simulation_time) {
@@ -220,7 +321,7 @@ void KivaSystem::simulate(int simulation_time) {
     initialize_zones();
     generate_zone_task_batch();
     initialize();
-    initialize_goal_locations();
+    initialize_goal_locations(3);
 
     for (; timestep < simulation_time; timestep += simulation_window) {
         std::cout << "Timestep " << timestep << std::endl;
@@ -230,7 +331,7 @@ void KivaSystem::simulate(int simulation_time) {
         }
 
         update_start_locations();
-        update_goal_locations();
+        update_goal_locations(3);
         solve();
 
         auto new_finished = move();

@@ -20,6 +20,27 @@ bool KivaGrid::load_map(std::string fname)
         return false;
     }
 }
+void KivaGrid::classify_locations() {
+    pickup_locations.clear();
+    dropoff_locations.clear();
+
+    int mid_col = cols / 2;
+
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j < cols; j++) {
+            int id = i * cols + j;
+            if (types[id] == "Home") {
+                if (j < mid_col)
+                    pickup_locations.push_back(id);
+                else
+                    dropoff_locations.push_back(id);
+            }
+        }
+    }
+
+    std::cout << "[Grid] Classified " << pickup_locations.size() << " pickup and "
+              << dropoff_locations.size() << " dropoff locations.\n";
+}
 
 bool KivaGrid::load_weighted_map(std::string fname)
 {
@@ -79,6 +100,7 @@ bool KivaGrid::load_weighted_map(std::string fname)
 	}
 
 	myfile.close();
+	classify_locations();
 	double runtime = (std::clock() - t) / CLOCKS_PER_SEC;
 	std::cout << "Map size: " << rows << "x" << cols << " with ";
 	cout << endpoints.size() << " endpoints and " <<
@@ -190,6 +212,7 @@ bool KivaGrid::load_unweighted_map(std::string fname)
 	
 
 	myfile.close();
+	classify_locations();
     double runtime = (std::clock() - t) / CLOCKS_PER_SEC;
     std::cout << "Map size: " << rows << "x" << cols << " with ";
 	cout << endpoints.size() << " endpoints and " <<
