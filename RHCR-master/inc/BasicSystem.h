@@ -17,9 +17,6 @@ public:
 	bool useDummyPaths;
     int time_limit;
     int travel_time_window;
-	//string potential_function;
-	//double potential_threshold;
-	//double suboptimal_bound;
     int screen;
 	bool log;
     int num_of_drives;

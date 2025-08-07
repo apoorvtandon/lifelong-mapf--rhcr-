@@ -347,7 +347,7 @@ list<tuple<int, int, int>> BasicSystem::move()
 
 
     for (int t = start_timestep; t <= end_timestep; t++)
-    {
+    {   
         for (int k = 0; k < num_of_drives; k++)
         {
             State curr = paths[k][t];
@@ -359,10 +359,17 @@ list<tuple<int, int, int>> BasicSystem::move()
             }*/
 
             // remove goals if necessary
+            // cout<<k<<" "<<timestep<<" "<<curr.location<<endl;
+            // for(auto it : goal_locations[k])
+            // {
+            //     cout<<it.first<<" "<<it.second<<endl;
+            // }
+            // cout<<endl;
+            
             if ((!hold_endpoints || paths[k].size() == t + 1) && !goal_locations[k].empty() && 
 				curr.location == goal_locations[k].front().first &&
 				curr.timestep >= goal_locations[k].front().second) // the agent finish its current task
-            {
+            {   
                 goal_locations[k].erase(goal_locations[k].begin());
 				finished_tasks.emplace_back(k, curr.location, t);
             }
