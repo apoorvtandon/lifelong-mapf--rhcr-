@@ -13,6 +13,11 @@ public:
 
 
 private:
+	// Add to KivaSystem.h (in class declaration)
+	std::vector<bool> is_inbound_agent; // true = inbound, false = outbound
+	std::vector<std::queue<std::vector<int>>> inbound_tasks;  // [zone] c shelves
+	std::vector<std::queue<std::vector<int>>> outbound_tasks; // [zone] c shelves
+
 	const KivaGrid& G;
 	const int PICKUP_BATCH_SIZE = 3;
 	unordered_set<int> held_endpoints;

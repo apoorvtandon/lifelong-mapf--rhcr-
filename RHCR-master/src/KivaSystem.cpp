@@ -60,7 +60,7 @@ void KivaSystem::initialize() {
     paths.resize(num_of_drives);
     finished_tasks.resize(num_of_drives);
     agent_zone.resize(num_of_drives);
-
+    
     bool succ = load_records();
     if (!succ) {
         timestep = 0;
@@ -136,43 +136,62 @@ vector<int> get_greedy_pickup_order(int start, const vector<int>& pickups, const
 
 void KivaSystem::initialize_goal_locations(int capacity) {
     if (hold_endpoints || useDummyPaths) return;
- 
 
     std::random_device rd;
     std::mt19937 g(rd());
 
     for (int k = 0; k < num_of_drives; ++k) {
         int zone = agent_zone[k];
+        std::vector<int> raw_tasks;
 
-        std::vector<int> raw_pickups;
+        // Fetch up to `capacity` tasks from the zone batch
         for (int i = 0; i < capacity && !zone_task_batches[zone].empty(); ++i) {
-            raw_pickups.push_back(zone_task_batches[zone].front());
+            raw_tasks.push_back(zone_task_batches[zone].front());
             zone_task_batches[zone].pop();
         }
 
-        if (raw_pickups.empty()) {
+        if (raw_tasks.empty()) {
             std::cout << "No task to allot for agent " << k << std::endl;
             continue;
         }
 
-        // Compute optimal order using Held-Karp TSP
-        std::vector<int> ordered_pickups = get_greedy_pickup_order(starts[k].location, raw_pickups, G);
+        std::vector<int> ordered_tasks = get_greedy_pickup_order(starts[k].location, raw_tasks, G);
 
-        // Add pickups in order
-        for (int goal : ordered_pickups) {
-            goal_locations[k].emplace_back(goal, 0);
+        // INBOUND: go to pickup point first, then shelves
+        if (k < num_of_drives / 2) {
+            if (!G.pickup_locations.empty()) {
+                std::uniform_int_distribution<> dist(0, G.pickup_locations.size() - 1);
+                int pickup = G.pickup_locations[dist(g)];
+                goal_locations[k].emplace_back(pickup, 0);
+                std::cout << "[Init Goal][Inbound] Agent " << k << ": Pickup " << pickup << " → Shelves ";
+            } else {
+                std::cerr << "No pickup locations defined!" << std::endl;
+                continue;
+            }
+
+            for (int shelf : ordered_tasks) {
+                goal_locations[k].emplace_back(shelf, 0);
+                std::cout << shelf << " ";
+            }
+            std::cout << std::endl;
         }
 
-        // Add one dropoff at end
-        if (!G.dropoff_locations.empty()) {
-            std::uniform_int_distribution<> dist(0, G.dropoff_locations.size() - 1);
-            int dropoff = G.dropoff_locations[dist(g)];
-            goal_locations[k].emplace_back(dropoff, 0);
-            std::cout << "[Init Goal] Agent " << k << ": Pickups " ;
-            for(auto it : ordered_pickups){std::cout<<it<<" ";} 
-            cout<< " → Dropoff " << dropoff << std::endl;
-        } else {
-            std::cerr << "No dropoff locations defined in the graph!" << std::endl;
+        // OUTBOUND: go to shelves first, then dropoff
+        else {
+            std::cout << "[Init Goal][Outbound] Agent " << k << ": Shelves ";
+            for (int shelf : ordered_tasks) {
+                goal_locations[k].emplace_back(shelf, 0);
+                std::cout << shelf << " ";
+            }
+            std::cout << std::endl;
+            if (!G.dropoff_locations.empty()) {
+                std::uniform_int_distribution<> dist(0, G.dropoff_locations.size() - 1);
+                int dropoff = G.dropoff_locations[dist(g)];
+                goal_locations[k].emplace_back(dropoff, 0);
+                std::cout << "→ Dropoff " << dropoff << std::endl;
+            } else {
+                std::cerr << "No dropoff locations defined!" << std::endl;
+            }
         }
     }
 }
@@ -183,7 +202,7 @@ void KivaSystem::update_goal_locations(int capacity) {
         new_agents.clear();
 
     if (hold_endpoints) {
-        unordered_map<int, int> held_locations; 
+        unordered_map<int, int> held_locations;
 
         for (int k = 0; k < num_of_drives; k++) {
             int curr = paths[k][timestep].location;
@@ -201,7 +220,6 @@ void KivaSystem::update_goal_locations(int capacity) {
             if (!goal_locations[k].empty() &&
                 paths[k].back().location == goal_locations[k].back().first &&
                 paths[k].back().timestep >= goal_locations[k].back().second) {
-                // Agent has reached its goal
                 int agent = k;
                 int loc = goal_locations[k].back().first;
                 auto it = held_locations.find(loc);
@@ -220,7 +238,6 @@ void KivaSystem::update_goal_locations(int capacity) {
                     held_locations[goal_loc] = k;
                     new_agents.emplace_back(k);
                 } else {
-                    // Conflict - hold start location instead
                     int agent = k;
                     int loc = curr;
                     auto it = held_locations.find(loc);
@@ -239,12 +256,12 @@ void KivaSystem::update_goal_locations(int capacity) {
     } else {
         for (int k = 0; k < num_of_drives; k++) {
             int curr = paths[k][timestep].location;
-    
+
             if (useDummyPaths) {
                 if (goal_locations[k].empty()) {
                     goal_locations[k].emplace_back(G.agent_home_locations[k], 0);
                 }
-    
+
                 if (goal_locations[k].size() == 1) {
                     int zone = agent_zone[k];
                     if (!zone_task_batches[zone].empty()) {
@@ -259,37 +276,47 @@ void KivaSystem::update_goal_locations(int capacity) {
                     (goal_locations[k].size() == 1 &&
                      paths[k].back().location == goal_locations[k].back().first &&
                      paths[k].back().timestep >= goal_locations[k].back().second)) {
-    
+
                     int zone = agent_zone[k];
                     std::vector<int> new_pickups;
-                     
-    
+
                     for (int i = 0; i < capacity && !zone_task_batches[zone].empty(); ++i) {
                         int next = zone_task_batches[zone].front();
                         zone_task_batches[zone].pop();
                         new_pickups.push_back(next);
                     }
-    
+
                     if (!new_pickups.empty()) {
-                        std::vector<int> ordered = get_greedy_pickup_order(curr, new_pickups, G);
-    
-                        // Add pickups
-                        for (int id : ordered)
-                            goal_locations[k].emplace_back(id, 0);
-    
-                        // Add one dropoff
-                        if (!G.dropoff_locations.empty()) {
-                            int drop = G.dropoff_locations[k % G.dropoff_locations.size()];
-                            goal_locations[k].emplace_back(drop, 0);
+                        bool is_inbound = k < num_of_drives / 2;
+
+                        if (is_inbound) {
+                            // Inbound agent: pickup location -> shelves
+                            if (!G.pickup_locations.empty()) {
+                                int pickup = G.pickup_locations[k % G.pickup_locations.size()];
+                                goal_locations[k].emplace_back(pickup, 0);
+                                std::vector<int> ordered = get_greedy_pickup_order(pickup, new_pickups, G);
+                                for (int id : ordered)
+                                    goal_locations[k].emplace_back(id, 0);
+                                new_agents.emplace_back(k);
+                            }
+                        } else {
+                            // Outbound agent: shelves -> dropoff
+                            std::vector<int> ordered = get_greedy_pickup_order(curr, new_pickups, G);
+                            for (int id : ordered)
+                                goal_locations[k].emplace_back(id, 0);
+                            if (!G.dropoff_locations.empty()) {
+                                int drop = G.dropoff_locations[k % G.dropoff_locations.size()];
+                                goal_locations[k].emplace_back(drop, 0);
+                            }
+                            new_agents.emplace_back(k);
                         }
-    
-                        new_agents.emplace_back(k);
                     }
                 }
             }
         }
     }
 }
+
     
 
 
