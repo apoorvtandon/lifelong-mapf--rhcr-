@@ -29,7 +29,8 @@ void KivaGrid::classify_locations() {
     for (int i = 0; i < rows; i++) {
         for (int j = 0; j < cols; j++) {
             int id = i * cols + j;
-            if (types[id] == "Home") {
+            if (types[id] == "Home" && (i<=3 || i>=29)) {
+				 //cout<<i<<" "<<j<<endl;
                 if (j < mid_col)
                     pickup_locations.push_back(id);
                 else
@@ -164,6 +165,8 @@ bool KivaGrid::load_unweighted_map(std::string fname)
 	//DeliverGoal.resize(row*col, false);
 	// read map
 	//int ep = 0, ag = 0;
+
+	 	
 	for (int i = 0; i < rows; i++)
 	{
 		getline(myfile, line);
@@ -182,9 +185,11 @@ bool KivaGrid::load_unweighted_map(std::string fname)
 				endpoints.push_back(id);
 			}
 			else if (line[j] == 'r') //robot rest
-			{
+			{	//std::cout<<i<<" "<<j<<" "<<id<<endl;
+				//marker[id]++;
 				types[id] = "Home";
 				weights[id][4] = 1;
+				if(i>3 && i<29)
 				agent_home_locations.push_back(id);
 			}
 			else
@@ -210,9 +215,9 @@ bool KivaGrid::load_unweighted_map(std::string fname)
 		}
 	}
 	
-
+		classify_locations();
 	myfile.close();
-	classify_locations();
+	
     double runtime = (std::clock() - t) / CLOCKS_PER_SEC;
     std::cout << "Map size: " << rows << "x" << cols << " with ";
 	cout << endpoints.size() << " endpoints and " <<

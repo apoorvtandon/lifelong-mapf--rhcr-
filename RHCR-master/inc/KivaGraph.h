@@ -1,7 +1,6 @@
 #pragma once
 #include "BasicGraph.h"
 
-
 class KivaGrid :
 	public BasicGraph
 {
@@ -16,6 +15,7 @@ public:
 private:
     bool load_weighted_map(string fname);
     bool load_unweighted_map(string fname);
+    unordered_map<int,int> marker;
     
     
 };
