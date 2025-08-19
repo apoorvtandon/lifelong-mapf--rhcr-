@@ -13,7 +13,7 @@ public:
 private:
     // Core warehouse layout and graph
     const KivaGrid& G;
-
+    vector<int> shelf_is_inbound;
     // Zone handling
     std::vector<std::vector<int>> zone_endpoints;       // endpoints per zone
     std::unordered_map<int, int> endpoint_to_zone;      // endpoint -> zone
@@ -46,7 +46,7 @@ private:
     std::vector<int> get_candidates_near_path(const std::vector<int>& path_nodes,
                                               const std::vector<int>& candidates,
                                               const KivaGrid& G, int threshold) const;  
-    void append_dropoff_if_needed(int agent_id, std::mt19937& g); 
+    void append_dropoff_if_needed(int agent_id, std::mt19937 g); 
 
     // Greedy ordering helper
     std::vector<int> get_greedy_pickup_order(int start,

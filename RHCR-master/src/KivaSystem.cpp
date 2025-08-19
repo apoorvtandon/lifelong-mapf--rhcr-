@@ -61,7 +61,8 @@ void KivaSystem::initialize() {
     paths.resize(num_of_drives);
     finished_tasks.resize(num_of_drives);
     agent_zone.resize(num_of_drives);
-    
+    shelf_is_inbound.resize(G.rows * G.cols, false); // if it's a vector
+
     bool succ = load_records();
     if (!succ) {
         timestep = 0;
@@ -191,8 +192,7 @@ std::vector<int> KivaSystem::queue_to_vector(int zone) const {
     return res;
 }
 
-// Remove a single task id from the zone queue (if present)
-// returns true if removed
+
 bool KivaSystem::remove_task_from_zone_queue(int zone, int task_id) {
     bool removed = false;
     std::queue<int> tmp;
@@ -210,7 +210,6 @@ bool KivaSystem::remove_task_from_zone_queue(int zone, int task_id) {
     return removed;
 }
 
-// Return candidates within threshold distance of any node along path_nodes
 std::vector<int> KivaSystem::get_candidates_near_path(const std::vector<int>& path_nodes,
                                                       const std::vector<int>& candidates,
                                                       const KivaGrid& G, int threshold) const {
@@ -226,149 +225,109 @@ std::vector<int> KivaSystem::get_candidates_near_path(const std::vector<int>& pa
     return res;
 }
 
-// Append a dropoff location if route contains any outbound picks (we use presence of any shelf appended after a pickup to indicate outbound content)
-void KivaSystem::append_dropoff_if_needed(int k, std::mt19937& g) {
-    // If route contains any node but we have at least one shelf (non-pickup) that we expect to drop, append a dropoff.
-    // Simpler heuristic: always append a dropoff if dropoff locations exist and the last stops contain shelves (not pickup station).
+
+void KivaSystem::append_dropoff_if_needed(int k, std::mt19937 g) {
+ 
     if (G.dropoff_locations.empty()) return;
     if (goal_locations[k].empty()) return;
-    // assume last nodes are shelves; append one dropoff
     std::uniform_int_distribution<> d(0, (int)G.dropoff_locations.size() - 1);
     int drop = G.dropoff_locations[d(g)];
     goal_locations[k].emplace_back(drop, 0);
 }
 
 
-// -------------------- Replaced initialize_goal_locations --------------------
-void KivaSystem::initialize_goal_locations(int capacity) {
-    if (hold_endpoints || useDummyPaths) return;
-
-    std::random_device rd;
-    std::mt19937 g(rd());
-
-   
+ void KivaSystem::initialize_goal_locations(int capacity) {
+    new_agents.clear();
+    goal_locations.resize(num_of_drives);
 
     for (int k = 0; k < num_of_drives; ++k) {
+        goal_locations[k].clear();
+
         int zone = agent_zone[k];
+        std::vector<int> initial_pickups;
 
-        // 1) Take up to 'capacity' tasks (temporarily) from zone queue as main candidates
-        std::vector<int> main_candidates;
-        for (int i = 0; i < capacity && !zone_task_batches[zone].empty(); ++i) {
-            main_candidates.push_back(zone_task_batches[zone].front());
+         for (int i = 0; i < capacity && !zone_task_batches[zone].empty(); ++i) {
+            int next = zone_task_batches[zone].front();
             zone_task_batches[zone].pop();
+            initial_pickups.push_back(next);
         }
-
-        if (main_candidates.empty()) {
-            // nothing for this agent now
-            // leave goal_locations[k] empty
-            continue;
-        }
-
-         std::vector<int> ordered_main = get_greedy_pickup_order(starts[k].location, main_candidates, G);
 
          bool inbound_mode = true;
-        if (!G.pickup_locations.empty() && !G.dropoff_locations.empty()) {
-            // 50-50 if both exist
+        if (!G.pickup_locations.empty() && !G.dropoff_locations.empty())
             inbound_mode = (rand() % 2 == 0);
-        } else if (!G.pickup_locations.empty()) {
+        else if (!G.pickup_locations.empty())
             inbound_mode = true;
-        } else {
+        else
             inbound_mode = false;
-        }
 
-        // 4) Build route: inbound => pickup station then shelves; outbound => shelves then dropoff
+        int start_loc = paths[k][0].location;  
+
         if (inbound_mode) {
-            // pickup location first
-            if (!G.pickup_locations.empty()) {
-                std::uniform_int_distribution<> dist_pick(0, (int)G.pickup_locations.size() - 1);
-                int pickup = G.pickup_locations[dist_pick(g)];
+             if (!G.pickup_locations.empty()) {
+                int pickup = G.pickup_locations[k % G.pickup_locations.size()];
                 goal_locations[k].emplace_back(pickup, 0);
             }
 
-            // append the ordered main shelves
-            for (int s : ordered_main) {
+            auto ordered = get_greedy_pickup_order(start_loc, initial_pickups, G);
+            for (int s : ordered) {
                 goal_locations[k].emplace_back(s, 0);
+                shelf_is_inbound[s] = true;
             }
 
-            // current planned load is ordered_main.size()
-            int planned_load = (int)ordered_main.size();
-
-            // 5) Opportunistic step: look at the remaining tasks in the zone queue and pick those near the path
-            // Convert remaining zone queue to vector
-            std::vector<int> remaining = queue_to_vector(zone);
-
-            // gather candidates near the current planned path (pickup + ordered_main)
+             std::vector<int> remaining = queue_to_vector(zone);
             std::vector<int> path_nodes;
             for (auto &gp : goal_locations[k]) path_nodes.push_back(gp.first);
-            // threshold 1 (direct neighbor). you can tune this number to allow larger detours.
-            std::vector<int> near_candidates = get_candidates_near_path(path_nodes, remaining, G, 1);
 
-            // order near_candidates greedily starting from last planned node (if any), else start
-           // Count inbound/outbound tasks in remaining queue
+            auto near_candidates = get_candidates_near_path(path_nodes, remaining, G, 1);
             auto [inbound_count, outbound_count] = count_inbound_outbound(remaining);
-
-            int last_node = path_nodes.empty() ? starts[k].location : path_nodes.back();
-            std::vector<int> opportunistic_order = get_greedy_pickup_order(last_node, near_candidates, G);
+            auto opportunistic_order = get_greedy_pickup_order(path_nodes.back(), near_candidates, G);
+            int planned_load = (int)ordered.size();
 
             for (int oc : opportunistic_order) {
                 if (planned_load >= capacity) break;
-
                 bool is_outbound_task = (std::find(G.pickup_locations.begin(), G.pickup_locations.end(), oc) == G.pickup_locations.end());
-                
-                // If outbound task, only allow if outbound_count > inbound_count
                 if (is_outbound_task && outbound_count <= inbound_count) continue;
 
-                bool removed = remove_task_from_zone_queue(zone, oc);
-                if (!removed) continue;
-
-                goal_locations[k].emplace_back(oc, 0);
-                planned_load++;
-            }
-
-
-            // 6) If we picked any outbound shelves (opportunistic picks), or if user wants dropoff after inbound mixes,
-            // append a dropoff at the end so outbound items can be delivered.
-            // Heuristic: append dropoff if we collected fewer than capacity but there exist dropoff locations and we added any opportunistic picks.
-            if (!G.dropoff_locations.empty()) {
-                // detect opportunistic picks by checking if any of the last nodes are not in ordered_main
-                bool has_opportunistic = false;
-                std::unordered_set<int> mainSet(ordered_main.begin(), ordered_main.end());
-                for (auto &gp : goal_locations[k]) {
-                    if (mainSet.find(gp.first) == mainSet.end()) {
-                        // This node is not one of the ordered_main shelves; it might be pickup station or opportunistic shelf
-                        // If it's not the pickup station, treat it as opportunistic shelf
-                        if (std::find(G.pickup_locations.begin(), G.pickup_locations.end(), gp.first) == G.pickup_locations.end())
-                            has_opportunistic = true;
-                    }
-                }
-                if (has_opportunistic) {
-                    append_dropoff_if_needed(k, g);
+                if (remove_task_from_zone_queue(zone, oc)) {
+                    goal_locations[k].emplace_back(oc, 0);
+                    shelf_is_inbound[oc] = true;
+                    planned_load++;
                 }
             }
+
+            if (!G.dropoff_locations.empty())
+                append_dropoff_if_needed(k, std::mt19937(rand()));
+
         } else {
-            // Outbound-first: start from current location -> shelves -> dropoff
-            std::vector<int> ordered_out = get_greedy_pickup_order(starts[k].location, ordered_main, G);
-            for (int s : ordered_out) goal_locations[k].emplace_back(s, 0);
+             auto ordered = get_greedy_pickup_order(start_loc, initial_pickups, G);
+            for (int s : ordered) {
+                goal_locations[k].emplace_back(s, 0);
+                shelf_is_inbound[s] = false;
+            }
 
             if (!G.dropoff_locations.empty()) {
-                std::uniform_int_distribution<> dist_drop(0, (int)G.dropoff_locations.size() - 1);
-                int drop = G.dropoff_locations[dist_drop(g)];
+                int drop = G.dropoff_locations[k % G.dropoff_locations.size()];
                 goal_locations[k].emplace_back(drop, 0);
             }
-            // Per user instruction "not reverse", we do not opportunistically add inbound picks while outbound.
         }
+
+        new_agents.emplace_back(k);
     }
 }
 
 
+
 void KivaSystem::update_goal_locations(int capacity) {
+    std::random_device rd;
+    std::mt19937 g(rd());
+
     if (!LRA_called)
         new_agents.clear();
 
     if (hold_endpoints) {
         unordered_map<int, int> held_locations;
 
-        for (int k = 0; k < num_of_drives; k++) {
+        for (int k = 0; k < num_of_drives; ++k) {
             int curr = paths[k][timestep].location;
 
             if (goal_locations[k].empty()) {
@@ -384,9 +343,11 @@ void KivaSystem::update_goal_locations(int capacity) {
             if (!goal_locations[k].empty() &&
                 paths[k].back().location == goal_locations[k].back().first &&
                 paths[k].back().timestep >= goal_locations[k].back().second) {
+                
                 int agent = k;
                 int loc = goal_locations[k].back().first;
                 auto it = held_locations.find(loc);
+
                 while (it != held_locations.end()) {
                     int removed_agent = it->second;
                     new_agents.remove(removed_agent);
@@ -396,6 +357,15 @@ void KivaSystem::update_goal_locations(int capacity) {
                     it = held_locations.find(loc);
                 }
                 held_locations[loc] = agent;
+
+                bool new_mode = (rand() % 2 == 0);
+                for (auto &gp : goal_locations[k]) {
+                    int shelf = gp.first;
+                    if (std::find(G.pickup_locations.begin(), G.pickup_locations.end(), shelf) == G.pickup_locations.end() &&
+                        std::find(G.dropoff_locations.begin(), G.dropoff_locations.end(), shelf) == G.dropoff_locations.end()) {
+                        shelf_is_inbound[shelf] = new_mode;
+                    }
+                }
             } else if (!goal_locations[k].empty()) {
                 int goal_loc = goal_locations[k].back().first;
                 if (held_locations.find(goal_loc) == held_locations.end()) {
@@ -417,8 +387,9 @@ void KivaSystem::update_goal_locations(int capacity) {
                 }
             }
         }
-    } else {
-        for (int k = 0; k < num_of_drives; k++) {
+
+    } else {  
+        for (int k = 0; k < num_of_drives; ++k) {
             int curr = paths[k][timestep].location;
 
             if (useDummyPaths) {
@@ -435,86 +406,90 @@ void KivaSystem::update_goal_locations(int capacity) {
                         new_agents.emplace_back(k);
                     }
                 }
-            } else {
-                if (goal_locations[k].empty() ||
-                    (goal_locations[k].size() == 1 &&
-                     paths[k].back().location == goal_locations[k].back().first &&
-                     paths[k].back().timestep >= goal_locations[k].back().second)) {
 
-                    int zone = agent_zone[k];
-                    std::vector<int> new_pickups;
+            } else {  // Regular mode
+                bool needs_new_goals = goal_locations[k].empty() ||
+                                       (goal_locations[k].size() == 1 &&
+                                        paths[k].back().location == goal_locations[k].back().first &&
+                                        paths[k].back().timestep >= goal_locations[k].back().second);
 
-                    for (int i = 0; i < capacity && !zone_task_batches[zone].empty(); ++i) {
-                        int next = zone_task_batches[zone].front();
-                        zone_task_batches[zone].pop();
-                        new_pickups.push_back(next);
+                if (!needs_new_goals) continue;
+
+                int zone = agent_zone[k];
+                std::vector<int> new_pickups;
+                for (int i = 0; i < capacity && !zone_task_batches[zone].empty(); ++i) {
+                    int next = zone_task_batches[zone].front();
+                    zone_task_batches[zone].pop();
+                    new_pickups.push_back(next);
+                }
+                if (new_pickups.empty()) continue;
+
+                // Randomly decide inbound or outbound mode
+                bool inbound_mode = true;
+                if (!G.pickup_locations.empty() && !G.dropoff_locations.empty())
+                    inbound_mode = (rand() % 2 == 0);
+                else if (!G.pickup_locations.empty())
+                    inbound_mode = true;
+                else
+                    inbound_mode = false;
+
+                goal_locations[k].clear();
+
+                if (inbound_mode) {
+                    // Inbound: pickup -> shelves
+                    if (!G.pickup_locations.empty()) {
+                        int pickup = G.pickup_locations[k % G.pickup_locations.size()];
+                        goal_locations[k].emplace_back(pickup, 0);
                     }
 
-                    if (!new_pickups.empty()) {
-                        bool is_inbound = false;
-                        // decide mode adaptively: prefer inbound if pickups exist, else outbound
-                        if (!G.pickup_locations.empty() && !G.dropoff_locations.empty()) {
-                            is_inbound = (rand() % 2 == 0);
-                        } else if (!G.pickup_locations.empty()) {
-                            is_inbound = true;
-                        } else {
-                            is_inbound = false;
+                    auto ordered = get_greedy_pickup_order(curr, new_pickups, G);
+                    for (int s : ordered) {
+                        goal_locations[k].emplace_back(s, 0);
+                        shelf_is_inbound[s] = true;
+                    }
+
+                    std::vector<int> remaining = queue_to_vector(zone);
+                    std::vector<int> path_nodes;
+                    for (auto &gp : goal_locations[k]) path_nodes.push_back(gp.first);
+                    auto near_candidates = get_candidates_near_path(path_nodes, remaining, G, 1);
+                    auto [inbound_count, outbound_count] = count_inbound_outbound(remaining);
+                    auto opportunistic_order = get_greedy_pickup_order(path_nodes.back(), near_candidates, G);
+                    int planned_load = (int)ordered.size();
+
+                    for (int oc : opportunistic_order) {
+                        if (planned_load >= capacity) break;
+                        bool is_outbound_task = (std::find(G.pickup_locations.begin(), G.pickup_locations.end(), oc) == G.pickup_locations.end());
+                        if (is_outbound_task && outbound_count <= inbound_count) continue;
+
+                        if (remove_task_from_zone_queue(zone, oc)) {
+                            goal_locations[k].emplace_back(oc, 0);
+                            shelf_is_inbound[oc] = true;
+                            planned_load++;
                         }
+                    }
 
-                        if (is_inbound) {
-                            // Inbound agent: pickup location -> shelves
-                            if (!G.pickup_locations.empty()) {
-                                int pickup = G.pickup_locations[k % G.pickup_locations.size()];
-                                goal_locations[k].emplace_back(pickup, 0);
-                                std::vector<int> ordered = get_greedy_pickup_order(pickup, new_pickups, G);
-                                for (int id : ordered)
-                                    goal_locations[k].emplace_back(id, 0);
-                                new_agents.emplace_back(k);
+                    if (!G.dropoff_locations.empty())
+                        append_dropoff_if_needed(k, g);
 
-                                // opportunistic: check remaining queue for near-path outbound shelves
-                                std::vector<int> remaining = queue_to_vector(zone);
-                                std::vector<int> path_nodes;
-                                for (auto &gp : goal_locations[k]) path_nodes.push_back(gp.first);
-                                std::vector<int> near_candidates = get_candidates_near_path(path_nodes, remaining, G, 1);
-                                auto [inbound_count, outbound_count] = count_inbound_outbound(remaining);
-                                std::vector<int> opportunistic_order = get_greedy_pickup_order(path_nodes.back(), near_candidates, G);
-                                int planned_load = (int)ordered.size();
+                } else {
+                       
+                    auto ordered = get_greedy_pickup_order(curr, new_pickups, G);
+                    for (int s : ordered) {
+                        goal_locations[k].emplace_back(s, 0);
+                        shelf_is_inbound[s] = false;
+                    }
 
-                                for (int oc : opportunistic_order) {
-                                    if (planned_load >= capacity) break;
-
-                                    bool is_outbound_task = (std::find(G.pickup_locations.begin(), G.pickup_locations.end(), oc) == G.pickup_locations.end());
-                                    if (is_outbound_task && outbound_count <= inbound_count) continue;
-
-                                    bool removed = remove_task_from_zone_queue(zone, oc);
-                                    if (!removed) continue;
-
-                                    goal_locations[k].emplace_back(oc, 0);
-                                    planned_load++;
-                                }
-
-                                if (!G.dropoff_locations.empty()) {
-                                    // append dropoff if opportunistic picks exist
-                                    append_dropoff_if_needed(k, *(new std::mt19937(rand())));
-                                }
-                            }
-                        } else {
-                            // Outbound agent: shelves -> dropoff
-                            std::vector<int> ordered = get_greedy_pickup_order(curr, new_pickups, G);
-                            for (int id : ordered)
-                                goal_locations[k].emplace_back(id, 0);
-                            if (!G.dropoff_locations.empty()) {
-                                int drop = G.dropoff_locations[k % G.dropoff_locations.size()];
-                                goal_locations[k].emplace_back(drop, 0);
-                            }
-                            new_agents.emplace_back(k);
-                        }
+                    if (!G.dropoff_locations.empty()) {
+                        int drop = G.dropoff_locations[k % G.dropoff_locations.size()];
+                        goal_locations[k].emplace_back(drop, 0);
                     }
                 }
+                new_agents.emplace_back(k);
             }
         }
     }
 }
+
 
 
 void KivaSystem::simulate(int simulation_time) {
